@@ -37,9 +37,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-multi-node-p-d-disagg-vllm-serving-efa",
+        },{id: "post-multi-node-p-d-disagg-vllm-serving-how-efa-works-compared-to-infiniband",
         
-          title: "Multi-Node P/D Disagg vLLM serving: EFA",
+          title: "Multi-Node P/D Disagg vLLM Serving: How EFA Works Compared to InfiniBand?",
         
         description: "AWS EFA 환경에서의 멀티노드 GPU 통신, InfiniBand vs EFA 비교, vLLM P/D Disagg 구성까지",
         section: "Posts",
@@ -48,9 +48,9 @@ ninja.data = [{
             window.location.href = "/ko/blog/2026/multi-node-gpu-networking-efa-srd/";
           
         },
-      },{id: "post-multi-node-p-d-disagg-vllm-serving-efa",
+      },{id: "post-multi-node-p-d-disagg-vllm-serving-how-efa-works-compared-to-infiniband",
         
-          title: "Multi-Node P/D Disagg vLLM serving: EFA",
+          title: "Multi-Node P/D Disagg vLLM Serving: How EFA Works Compared to InfiniBand?",
         
         description: "Multi-node GPU communication on AWS EFA, InfiniBand vs EFA comparison, and vLLM P/D Disagg setup",
         section: "Posts",
