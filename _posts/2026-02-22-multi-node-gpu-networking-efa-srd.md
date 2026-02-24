@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Multi-Node P/D Disagg vLLM serving: EFA"
+title: "Multi-Node P/D Disagg vLLM Serving: How EFA Works Compared to InfiniBand?"
 date: 2026-02-22
 description: "AWS EFA 환경에서의 멀티노드 GPU 통신, InfiniBand vs EFA 비교, vLLM P/D Disagg 구성까지"
 tags: gpu networking efa infiniband rdma vllm
