@@ -1,748 +1,245 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://nsd9696.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://nsd9696.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-02-21T23:09:58+00:00</updated><id>https://nsd9696.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">a post with plotly.js</title><link href="https://nsd9696.github.io/blog/2025/plotly/" rel="alternate" type="text/html" title="a post with plotly.js"/><published>2025-03-26T14:24:00+00:00</published><updated>2025-03-26T14:24:00+00:00</updated><id>https://nsd9696.github.io/blog/2025/plotly</id><content type="html" xml:base="https://nsd9696.github.io/blog/2025/plotly/"><![CDATA[<p>This is an example post with some <a href="https://plotly.com/javascript/">plotly</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
-</span><span class="sb">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "type": "scatter"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [16, 5, 11, 9],
-      "type": "scatter"
-    }
-  ]
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-plotly">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "type": "scatter"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [16, 5, 11, 9],
-      "type": "scatter"
-    }
-  ]
-}
-</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
-</span><span class="sb">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "mode": "markers"
-    },
-    {
-      "x": [2, 3, 4, 5],
-      "y": [16, 5, 11, 9],
-      "mode": "lines"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [12, 9, 15, 12],
-      "mode": "lines+markers"
-    }
-  ],
-  "layout": {
-    "title": {
-      "text": "Line and Scatter Plot"
-    }
-  }
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-plotly">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "mode": "markers"
-    },
-    {
-      "x": [2, 3, 4, 5],
-      "y": [16, 5, 11, 9],
-      "mode": "lines"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [12, 9, 15, 12],
-      "mode": "lines+markers"
-    }
-  ],
-  "layout": {
-    "title": {
-      "text": "Line and Scatter Plot"
-    }
-  }
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included plotly.js code could look like]]></summary></entry><entry><title type="html">a post with image galleries</title><link href="https://nsd9696.github.io/blog/2024/photo-gallery/" rel="alternate" type="text/html" title="a post with image galleries"/><published>2024-12-04T01:59:00+00:00</published><updated>2024-12-04T01:59:00+00:00</updated><id>https://nsd9696.github.io/blog/2024/photo-gallery</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/photo-gallery/"><![CDATA[<p>The images in this post are all zoomable, arranged into different mini-galleries using different libraries.</p> <h2 id="lightbox2"><a href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a></h2> <p><a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/></a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/></a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/></a></p> <hr/> <h2 id="photoswipe"><a href="https://photoswipe.com/">PhotoSwipe</a></h2> <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started"> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt=""/> </a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" data-pswp-width="1875" data-pswp-height="2500" data-cropped="true" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt=""/> </a> <a href="https://unsplash.com" data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt=""/> </a> <div> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1667" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt=""/> </a> </div> </div> <hr/> <h2 id="spotlight-js"><a href="https://nextapps-de.github.io/spotlight/">Spotlight JS</a></h2> <div class="spotlight-group"> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/> </a> </div> <div class="spotlight-group"> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg"/> </a> </div> <hr/> <h2 id="venobox"><a href="https://veno.es/venobox/">Venobox</a></h2> <p><a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/></a> <a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/></a> <a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/></a></p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what included image galleries could look like]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://nsd9696.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://nsd9696.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[<p>Learn more:Learn more:Learn more:Learn more:Learn more:Learn more:May 14, 2024 We’re introducing a series of updates across the Gemini family of models, including the new 1.5 Flash, our lightweight model for speed and efficiency, and Project Astra, our vision for the future of AI assistants. In December, we launched our first natively multimodal model Gemini 1.0 in three sizes: Ultra, Pro and Nano. Just a few months later we released 1.5 Pro, with enhanced performance and a breakthrough long context window of 1 million tokens.Developers and enterprise customers have been putting 1.5 Pro to use in incredible ways and finding its long context window, multimodal reasoning capabilities and impressive overall performance incredibly useful.We know from user feedback that some applications need lower latency and a lower cost to serve. This inspired us to keep innovating, so today, we’re introducing Gemini 1.5 Flash: a model that’s lighter-weight than 1.5 Pro, and designed to be fast and efficient to serve at scale.Both 1.5 Pro and 1.5 Flash are available in public preview with a 1 million token context window in Google AI Studio and Vertex AI. And now, 1.5 Pro is also available with a 2 million token context window via waitlist to developers using the API and to Google Cloud customers.We’re also introducing updates across the Gemini family of models, announcing our next generation of open models, Gemma 2, and sharing progress on the future of AI assistants, with Project Astra.Context lengths of leading foundation models compared with Gemini 1.5’s 2 million token capability1.5 Flash is the newest addition to the Gemini model family and the fastest Gemini model served in the API. It’s optimized for high-volume, high-frequency tasks at scale, is more cost-efficient to serve and features our breakthrough long context window.While it’s a lighter weight model than 1.5 Pro, it’s highly capable of multimodal reasoning across vast amounts of information and delivers impressive quality for its size.The new Gemini 1.5 Flash model is optimized for speed and efficiency, is highly capable of multimodal reasoning and features our breakthrough long context window.1.5 Flash excels at summarization, chat applications, image and video captioning, data extraction from long documents and tables, and more. This is because it’s been trained by 1.5 Pro through a process called “distillation,” where the most essential knowledge and skills from a larger model are transferred to a smaller, more efficient model.Read more about 1.5 Flash in our updated Gemini 1.5 technical report, on the Gemini technology page, and learn about 1.5 Flash’s availability and pricing.Over the last few months, we’ve significantly improved 1.5 Pro, our best model for general performance across a wide range of tasks.Beyond extending its context window to 2 million tokens, we’ve enhanced its code generation, logical reasoning and planning, multi-turn conversation, and audio and image understanding through data and algorithmic advances. We see strong improvements on public and internal benchmarks for each of these tasks.1.5 Pro can now follow increasingly complex and nuanced instructions, including ones that specify product-level behavior involving role, format and style. We’ve improved control over the model’s responses for specific use cases, like crafting the persona and response style of a chat agent or automating workflows through multiple function calls. And we’ve enabled users to steer model behavior by setting system instructions.We added audio understanding in the Gemini API and Google AI Studio, so 1.5 Pro can now reason across image and audio for videos uploaded in Google AI Studio. And we’re now integrating 1.5 Pro into Google products, including Gemini Advanced and in Workspace apps.Read more about 1.5 Pro in our updated Gemini 1.5 technical report and on the Gemini technology page.Gemini Nano is expanding beyond text-only inputs to include images as well. Starting with Pixel, applications using Gemini Nano with Multimodality will be able to understand the world the way people do — not just through text, but also through sight, sound and spoken language.Read more about Gemini 1.0 Nano on Android.Today, we’re also sharing a series of updates to Gemma, our family of open models built from the same research and technology used to create the Gemini models.We’re announcing Gemma 2, our next generation of open models for responsible AI innovation. Gemma 2 has a new architecture designed for breakthrough performance and efficiency, and will be available in new sizes.The Gemma family is also expanding with PaliGemma, our first vision-language model inspired by PaLI-3. And we’ve upgraded our Responsible Generative AI Toolkit with LLM Comparator for evaluating the quality of model responses.Read more on the Developer blog.As part of Google DeepMind’s mission to build AI responsibly to benefit humanity, we’ve always wanted to develop universal AI agents that can be helpful in everyday life. That’s why today, we’re sharing our progress in building the future of AI assistants with Project Astra (advanced seeing and talking responsive agent).To be truly useful, an agent needs to understand and respond to the complex and dynamic world just like people do — and take in and remember what it sees and hears to understand context and take action. It also needs to be proactive, teachable and personal, so users can talk to it naturally and without lag or delay.While we’ve made incredible progress developing AI systems that can understand multimodal information, getting response time down to something conversational is a difficult engineering challenge. Over the past few years, we’ve been working to improve how our models perceive, reason and converse to make the pace and quality of interaction feel more natural.Building on Gemini, we’ve developed prototype agents that can process information faster by continuously encoding video frames, combining the video and speech input into a timeline of events, and caching this information for efficient recall.By leveraging our leading speech models, we also enhanced how they sound, giving the agents a wider range of intonations. These agents can better understand the context they’re being used in, and respond quickly, in conversation.With technology like this, it’s easy to envision a future where people could have an expert AI assistant by their side, through a phone or glasses. And some of these capabilities are coming to Google products, like the Gemini app and web experience, later this year.We’ve made incredible progress so far with our family of Gemini models, and we’re always striving to advance the state-of-the-art even further. By investing in a relentless production line of innovation, we’re able to explore new ideas at the frontier, while also unlocking the possibility of new and exciting Gemini use cases.Learn more about Gemini and its capabilities. Your information will be used in accordance with Google’s privacy policy.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Done. Just one step more.
-    
-      Check your inbox to confirm your subscription.
-    You are already subscribed to our newsletter.
-    You can also subscribe with a
-    different email address
-    
-    .
-    
-  Let’s stay in touch. Get the latest news from Google in your inbox.
-          Follow Us
-</code></pre></div></div>]]></content><author><name></name></author><category term="external-posts"/><category term="google"/><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://nsd9696.github.io/blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://nsd9696.github.io/blog/2024/tabs</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://nsd9696.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://nsd9696.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-02-24T02:42:41+00:00</updated><id>https://nsd9696.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry xml:lang="en"><title type="html">Multi-Node P/D Disagg vLLM serving: EFA</title><link href="https://nsd9696.github.io/blog/2026/multi-node-gpu-networking-efa-srd-en/" rel="alternate" type="text/html" title="Multi-Node P/D Disagg vLLM serving: EFA"/><published>2026-02-22T00:00:00+00:00</published><updated>2026-02-22T00:00:00+00:00</updated><id>https://nsd9696.github.io/blog/2026/multi-node-gpu-networking-efa-srd-en</id><content type="html" xml:base="https://nsd9696.github.io/blog/2026/multi-node-gpu-networking-efa-srd-en/"><![CDATA[<h2 id="1-multi-node-gpu-requirements">1. Multi-Node GPU Requirements</h2> <p>When GPUs communicate within a single node, NVLink provides hundreds of GB/s of bandwidth. NVLink enables direct point-to-point connections between GPUs, allowing them to communicate without going through the CPU.</p> <p>The problem arises when you go multi-node — the bottleneck shifts to the inter-node network. This is especially critical for AllReduce in Tensor Parallelism during LLM serving and KV cache transfer in Disaggregated Serving (Prefill/Decode separation). Naturally, TCP/IP can’t meet these demands.</p> <h3 id="the-limitations-of-tcpip">The Limitations of TCP/IP</h3> <p>TCP requires every packet to traverse the kernel network stack. This triggers a chain of system calls, context switches, protocol processing, and buffer copies, making it extremely slow. Unnecessary memcopy operations also occur in the process.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TCP/IP Path (Traditional):
+GPU → cudaMemcpy → CPU RAM → send() → Kernel → NIC
+  → Network →
+NIC → Kernel → recv() → CPU RAM → cudaMemcpy → GPU
 
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-1</span><span class="w"> </span><span class="cp">%}</span>
+RDMA + GPUDirect Path:
+GPU HBM → NIC (Direct DMA from GPU memory)
+  → Network →
+NIC → GPU HBM (Direct DMA)
+</code></pre></div></div> <p>RDMA (Remote Direct Memory Access) bypasses the CPU and kernel, allowing the NIC to directly access memory. OS Bypass eliminates system call and context switch overhead. GPUDirect RDMA takes this a step further by enabling the NIC to perform DMA directly to GPU memory (HBM).</p> <h3 id="infiniband">InfiniBand</h3> <p>InfiniBand is what made GPUDirect RDMA possible. With each generation — HDR (A100 standard) and NDR (H100 standard) — per-port bandwidth roughly doubles (200Gbps → 400Gbps).</p> <hr/> <h2 id="2-efa-and-srd">2. EFA and SRD</h2> <h3 id="efa-elastic-fabric-adapter">EFA (Elastic Fabric Adapter)</h3> <p>EFA (Elastic Fabric Adapter) is a high-performance network interface designed by AWS — think of it as something similar to InfiniBand. It’s available on specific instance types (p4d, p5, p6, etc.) and provides the OS bypass and RDMA capabilities described above.</p> <h3 id="ethernet-vs-infiniband">Ethernet vs InfiniBand</h3> <p>The biggest difference with EFA is that it operates on standard Ethernet fabric. InfiniBand is a single-vendor ecosystem from NVIDIA (Mellanox) — switches, NICs, and cables all need to be Mellanox products, with virtually no alternatives. Ethernet equipment, on the other hand, is available from multiple vendors like Broadcom and Intel, making it commodity hardware.</p> <h3 id="rdma-transport-modes">RDMA Transport Modes</h3> <table> <thead> <tr> <th>Mode</th> <th>Dedicated Connection</th> <th>Delivery Guarantee</th> <th>Order Guarantee</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><strong>RC</strong> (Reliable Connection)</td> <td>Required (dedicated QP per peer)</td> <td>O</td> <td>O</td> <td>Default InfiniBand transport</td> </tr> <tr> <td><strong>UD</strong> (Unreliable Datagram)</td> <td>Not required (single QP)</td> <td>X</td> <td>X</td> <td>Lightest weight</td> </tr> <tr> <td><strong>RD</strong> (Reliable Datagram)</td> <td>Not required (single QP)</td> <td>O</td> <td>O</td> <td>Theoretically ideal but unimplemented</td> </tr> <tr> <td><strong>SRD</strong> (Scalable Reliable Datagram)</td> <td>Not required</td> <td>O</td> <td>X (SW reordering)</td> <td>Designed by AWS</td> </tr> </tbody> </table> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RC (Reliable Connection):
+Server A ──dedicated link──→ Server B
+Server A ──dedicated link──→ Server C
+→ Requires a dedicated QP (Queue Pair) per peer
 
-Content 1
+UD (Unreliable Datagram):
+Server A ──link──→ can send to anyone
+→ No dedicated link needed, one QP for all peers
 
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
+RD (Reliable Datagram):
+Server A ──link──→ can send to anyone
+→ No dedicated link + delivery guarantee + order guarantee
+</code></pre></div></div> <h3 id="why-rd-is-not-actually-used">Why RD Is Not Actually Used</h3> <p>In practice, InfiniBand doesn’t really use RD. The reason comes down to hardware implementation complexity.</p> <ul> <li><strong>RC</strong> only needs to track state for one peer per QP, and <strong>UD</strong> doesn’t need state tracking at all since it’s fire-and-forget.</li> <li>But with <strong>RD</strong>, the NIC must track state for every communication peer: <ul> <li>“Sent up to packet 3 to Server B, received ACK up to 2”</li> <li>“Sent up to packet 7 to Server C, received ACK up to 5”</li> <li>“Sent packet 1 to Server D, no ACK yet”</li> <li>“Sent up to packet 12 to Server E, received ACK up to 10”</li> <li>… × every communication peer</li> </ul> </li> <li>For example, if a single QP communicates with 1,000 servers, the NIC must manage 1,000 states. These need to be stored in the NIC chip’s SRAM, which is expensive and small.</li> <li>So from NVIDIA’s perspective, RC and UD were sufficient, there was no demand for RD, and the cost-benefit didn’t make sense — so it was deprecated.</li> </ul> <h3 id="srd-scalable-reliable-datagram">SRD (Scalable Reliable Datagram)</h3> <p>So what’s different about AWS’s SRD? <strong>It gives up the ordering guarantee from RD.</strong></p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RD:   Packet 1 → Packet 2 → Packet 3  (must arrive in order)
+      Path: A ━━━━━━━━━━━━━→ B  (single path)
 
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-2</span><span class="w"> </span><span class="cp">%}</span>
+SRD:  Packet 1 ──Path A──→ ┐
+      Packet 2 ──Path B──→ ├→ Software reorders after arrival
+      Packet 3 ──Path C──→ ┘
+</code></pre></div></div> <p>By giving up ordering, packets can be sprayed across multiple paths. If one path is congested, packets can take another — this is advantageous in Ethernet environments. In environments where thousands of servers share the network, SRD provides stability, which is why it was adopted.</p> <hr/> <h2 id="3-efa--gpudirect-rdma">3. EFA → GPUDirect RDMA</h2> <p>When using EFA, the GPUDirect RDMA flow looks like this:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Node A                                                Node B
+┌─────────┐                                        ┌─────────┐
+│ GPU HBM │                                        │ GPU HBM │
+└────┬────┘                                        └────▲────┘
+     │ PCIe                                             │ PCIe
+┌────▼──────┐   Ethernet   ┌────────┐   Ethernet   ┌────┴──────┐
+│ Nitro(EFA)│───cable─────▶│ Switch │───cable─────▶│ Nitro(EFA)│
+└───────────┘              └────────┘              └───────────┘
+</code></pre></div></div> <p>Of course, intra-node GPU communication still uses NVLink.</p> <h3 id="infiniband-vs-efa-performance-comparison">InfiniBand vs EFA Performance Comparison</h3> <p>So does EFA actually deliver comparable performance to InfiniBand? Here’s a summary of benchmark comparisons:</p> <table> <thead> <tr> <th>Metric</th> <th>InfiniBand</th> <th>EFA/Ethernet</th> <th>Conclusion</th> </tr> </thead> <tbody> <tr> <td><strong>Small message latency</strong></td> <td>~1 µs</td> <td>~10 µs</td> <td>IB dominant</td> </tr> <tr> <td><strong>Large transfer bandwidth</strong></td> <td>~200 Gbps</td> <td>~200 Gbps</td> <td>Similar</td> </tr> <tr> <td><strong>AI Training (large-scale)</strong></td> <td>Baseline</td> <td>Similar with proper tuning</td> <td>Minimal gap</td> </tr> <tr> <td><strong>AI Inference (Decode)</strong></td> <td>Favorable</td> <td>Avg 1.0166% slower</td> <td>IB slightly better</td> </tr> <tr> <td><strong>Cost</strong></td> <td>1.5–2.5x more expensive</td> <td>Baseline</td> <td>Ethernet wins</td> </tr> </tbody> </table> <blockquote> <p>Sources: <a href="https://www.wwt.com/blog/the-battle-of-ai-networking-ethernet-vs-infiniband">WWT - The Battle of AI Networking</a>, <a href="https://www.vitextech.com/blogs/blog/infiniband-vs-ethernet-for-ai-clusters-effective-gpu-networks-in-2025">Vitex Tech - InfiniBand vs Ethernet</a></p> </blockquote> <p>Overall, InfiniBand appears to have better raw performance. However, if you already have your setup on AWS, EFA can be advantageous. That said, considering that recent neo-cloud GPU pricing is significantly cheaper compared to AWS, InfiniBand might be the better choice.</p> <hr/> <h2 id="4-pd-disagg-vllm-serving-on-efa">4. P/D Disagg vLLM Serving on EFA</h2> <p>In my case, I was working on setting up Prefill/Decode Disagg in an A100 environment. In this scenario, EFA is directly involved in the kv_transfer stage.</p> <h3 id="kv-cache-transfer-software-stack">KV Cache Transfer Software Stack</h3> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──────────────────────────────────────────────────────────┐
+│  vLLM NixlConnector                                      │
+│  Prefill done → KV Cache block list + remote block map   │
+│  Generates async transfer request                        │
+├──────────────────────────────────────────────────────────┤
+│  NIXL (NVIDIA Inference Xfer Library)                    │
+│  Agent: memory registration, metadata mgmt, backend sel  │
+│  create_xfer_req → post_xfer_req (async, one-sided)      │
+├──────────────────────────────────────────────────────────┤
+│  ┌─ libfabric path (recommended) ──────────────────┐     │
+│  │  fi_write / fi_read (RDMA)                      │     │
+│  │  or fi_send / fi_recv (message)                 │     │
+│  │  FI_EP_RDM endpoint                             │     │
+│  └─────────────────────────────────────────────────┘     │
+├──────────────────────────────────────────────────────────┤
+│  EFA Kernel Driver (efa.ko)                              │
+│  RDMA subsystem, ibverbs interface                       │
+│  Memory Registration (GPU memory → registered with NIC)  │
+│  GPUDirect RDMA: GPU HBM → PCIe → direct NIC transfer    │
+├──────────────────────────────────────────────────────────┤
+│  Nitro Card (Hardware)                                   │
+│  SRD protocol engine, packet spraying, congestion ctrl   │
+├──────────────────────────────────────────────────────────┤
+│  AWS Network Fabric (Ethernet)                           │
+│  ECMP multipath, spine-leaf topology                     │
+└──────────────────────────────────────────────────────────┘
+</code></pre></div></div> <p>Let’s look at each component above EFA in detail.</p> <h3 id="nixl-nvidia-inference-xfer-library">NIXL (NVIDIA Inference Xfer Library)</h3> <p>NIXL is a dedicated library for GPU-to-GPU memory transfer. The existing NCCL is optimized for collective communication like AllReduce and All-to-All, but it’s not well-suited for point-to-point transfers of memory blocks from one specific GPU to another — that’s why NIXL was created.</p> <p>It’s used in P/D Disagg for the <code class="language-plaintext highlighter-rouge">Prefill GPU ──RDMA Write──▶ Decode GPU</code> process, and for migration between Decode instances: <code class="language-plaintext highlighter-rouge">Decode GPU (Server A, overloaded) ──RDMA──▶ Decode GPU (Server B, available)</code>.</p> <p>NIXL includes a NIXL Agent that handles memory registration, metadata management (GPU memory addresses, RDMA keys, NIC addresses, etc.), and plugin backends (UCX, libfabric) that perform the actual transfers.</p> <h3 id="ucx-unified-communication-x">UCX (Unified Communication X)</h3> <p>UCX is a general-purpose communication framework originally built for InfiniBand. It internally supports protocols including RC, UD, TCP, cuda_ipc (for GPUs on the same node), and cuda_copy (GPU ↔ CPU copy).</p> <p>On EFA, you can use UCX by setting <code class="language-plaintext highlighter-rouge">UCX_TLS=ib</code>, since EFA provides an ibverbs-compatible interface.</p> <ul> <li><a href="https://github.com/amzn/amzn-drivers/blob/master/kernel/linux/efa/src/efa_verbs.c">EFA ibverbs implementation (AWS driver)</a></li> <li><a href="https://github.com/linux-rdma/rdma-core/blob/master/providers/efa/efa.c">rdma-core EFA provider</a></li> </ul> <h3 id="libfabric-open-fabrics-interface">libfabric (Open Fabrics Interface)</h3> <p>libfabric is the standard abstraction layer for network hardware vendors. It’s composed internally of providers including EFA provider, TCP provider, and SHM provider.</p> <p>Officially, libfabric appears to be the recommended path, but in practice UCX had better dependency compatibility. With libfabric, I kept running into GPU memory bad address issues, so I ended up deprecating it for my use case.</p> <h3 id="aws-ofi-nccl-optional">aws-ofi-nccl (optional)</h3> <p>Since my setup was P/D Disagg, I didn’t need NCCL. However, if your model is large enough to require multi-node setup, or for multi-node training, NCCL is necessary — and in EFA environments, aws-ofi-nccl is required.</p> <p>NCCL was originally designed for InfiniBand and has a built-in <code class="language-plaintext highlighter-rouge">net_ib</code> transport that directly calls IB Verbs APIs. aws-ofi-nccl implements NCCL’s network plugin API and translates it to libfabric’s RDM interface.</p> <h3 id="efa-nv-peermem">efa-nv-peermem</h3> <p>This is a kernel module that enables the NIC to directly access GPU memory. The standard version is nvidia-peermem, but for EFA, efa-nv-peermem is used instead.</p> <p>By default, NICs can only read CPU memory. efa-nv-peermem bridges the GPU and NIC, enabling direct access. (It’s a GPUDirect RDMA module.)</p>]]></content><author><name></name></author><category term="infrastructure"/><category term="gpu"/><category term="networking"/><category term="efa"/><category term="infiniband"/><category term="rdma"/><category term="vllm"/><summary type="html"><![CDATA[Multi-node GPU communication on AWS EFA, InfiniBand vs EFA comparison, and vLLM P/D Disagg setup]]></summary></entry><entry xml:lang="ko"><title type="html">Multi-Node P/D Disagg vLLM serving: EFA</title><link href="https://nsd9696.github.io/ko/blog/2026/multi-node-gpu-networking-efa-srd/" rel="alternate" type="text/html" title="Multi-Node P/D Disagg vLLM serving: EFA"/><published>2026-02-22T00:00:00+00:00</published><updated>2026-02-22T00:00:00+00:00</updated><id>https://nsd9696.github.io/ko/blog/2026/multi-node-gpu-networking-efa-srd</id><content type="html" xml:base="https://nsd9696.github.io/ko/blog/2026/multi-node-gpu-networking-efa-srd/"><![CDATA[<h2 id="1-멀티노드-gpu-요구사항">1. 멀티노드 GPU 요구사항</h2> <p>단일노드에서 GPU 끼리 통신할 때는 NVLink가 초당 수백 GB 대역폭을 제공합니다. NVLink 는 GPU 간의 직접 연결 (point-to-point)을 가능하게 해서 CPU 를 거치지 않고 GPU 끼리 직접 통신을 가능하게 합니다.</p> <p>문제는 멀티노드로 가면서 노드간 네트워크로 병목이 옮겨집니다. 특히 LLM 서빙에서 Tensor Parallelism 의 AllReduce 나 Disaggregated Serving(Prefill / Decode 분리) 에서의 KV cache transfer 가 그것이죠. 이때 당연히 TCP/IP 는 요구를 충족하지 못합니다.</p> <h3 id="tcpip의-한계">TCP/IP의 한계</h3> <p>TCP 는 매 패킷마다 커널 네트워크 스택들을 통과해야 합니다. 이때 system call, context switch, protocol 처리, buffer copy 같은게 연쇄적으로 발생해서 아주아주 느려지죠. 이 과정에서 불필요한 memcopy 도 같이 발생합니다.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TCP/IP 경로 (기존):
+GPU → cudaMemcpy → CPU RAM → send() → 커널 → NIC
+  → 네트워크 →
+NIC → 커널 → recv() → CPU RAM → cudaMemcpy → GPU
 
-Content 2
+RDMA + GPUDirect 경로:
+GPU HBM → NIC (GPU 메모리 직접 DMA)
+  → 네트워크 →
+NIC → GPU HBM (직접 DMA)
+</code></pre></div></div> <p>RDMA(Remote Direct Memory Access)는 CPU와 커널을 우회하여 NIC가 직접 메모리에 접근할 수 있게 합니다. OS Bypass를 통해 system call과 context switch 오버헤드를 제거하고, GPUDirect RDMA는 여기서 한 발 더 나아가 NIC가 GPU 메모리(HBM)에 직접 DMA를 수행할 수 있게 합니다.</p> <h3 id="infiniband">InfiniBand</h3> <p>이런 GPUDirect RDMA 까지 가능하게 한 것이 InfiniBand이고 HDR(A100 표준), NDR(H100 표준)과 같은 세대에 따라 포트당 대역폭이 약 2배 정도씩(200Gbps → 400Gbps) 더 증가한다고 보시면 될 것 같습니다.</p> <hr/> <h2 id="2-efa와-srd">2. EFA와 SRD</h2> <h3 id="efa-elastic-fabric-adapter">EFA (Elastic Fabric Adapter)</h3> <p>EFA(Elastic Fabric Adapter)는 AWS 에서 설계한 고성능 네트워크 인터페이스인데 InfiniBand 같은거라고 보시면 될 것 같습니다. 특정 instance type들(p4d, p5, p6 등) 에서 사용할 수 있고 위에서 설명드린 OS bypass 나 RDMA의 기능들을 제공합니다.</p> <h3 id="이더넷-vs-infiniband">이더넷 vs InfiniBand</h3> <p>EFA의 가장 큰 차이점은 표준 이더넷 패브릭 위에서 동작한다는 점입니다. InfiniBand 는 NVIDIA(Mellanox) 단일 벤더입니다. 그래서 스위치나 NIC, 케이블 모두 Mellanox 제품이어야 하고 대안이 거의 없습니다. 반대로 이더넷 장비는 Broadcom, Intel 등의 다수 벤더가 가능한 범용적인 장비입니다.</p> <h3 id="rdma-전송-모드">RDMA 전송 모드</h3> <table> <thead> <tr> <th>모드</th> <th>전용 연결 필요</th> <th>전달 보장</th> <th>순서 보장</th> <th>설명</th> </tr> </thead> <tbody> <tr> <td><strong>RC</strong> (Reliable Connection)</td> <td>필요 (서버마다 전용 QP)</td> <td>O</td> <td>O</td> <td>InfiniBand 기본 전송 방식</td> </tr> <tr> <td><strong>UD</strong> (Unreliable Datagram)</td> <td>불필요 (하나의 QP)</td> <td>X</td> <td>X</td> <td>가장 가벼운 방식</td> </tr> <tr> <td><strong>RD</strong> (Reliable Datagram)</td> <td>불필요 (하나의 QP)</td> <td>O</td> <td>O</td> <td>이론적으로 이상적이나 미구현</td> </tr> <tr> <td><strong>SRD</strong> (Scalable Reliable Datagram)</td> <td>불필요</td> <td>O</td> <td>X (SW 재정렬)</td> <td>AWS가 설계한 방식</td> </tr> </tbody> </table> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RC (Reliable Connection):
+서버 A ──전용 회선──→ 서버 B
+서버 A ──전용 회선──→ 서버 C
+→ 서버마다 전용 QP(Queue Pair)가 필요
 
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
+UD (Unreliable Datagram):
+서버 A ──회선──→ 아무에게나 보낼 수 있음
+→ 전용 회선 불필요, 하나의 QP로 모든 상대와 통신
 
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="1796b54f-3541-44a6-96df-1fc1013cc326" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="1796b54f-3541-44a6-96df-1fc1013cc326" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="f31b95ce-ca61-4f67-8314-74c53f9e1f71" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="f31b95ce-ca61-4f67-8314-74c53f9e1f71" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
-</code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="7132593b-7d39-4eef-8f55-ee4877c6fdd6" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="7132593b-7d39-4eef-8f55-ee4877c6fdd6" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://nsd9696.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://nsd9696.github.io/blog/2024/typograms</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">+----+
-|    |---&gt; My first diagram!
-+----+</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-typograms">+----+
-|    |---&gt; My first diagram!
-+----+
-</code></pre> <p>Another example:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>which generates:</p> <pre><code class="language-typograms">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.
-</code></pre> <p>For more examples, check out the <a href="https://google.github.io/typograms/#examples">typograms documentation</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included typograms code could look like]]></summary></entry><entry><title type="html">a post that can be cited</title><link href="https://nsd9696.github.io/blog/2024/post-citation/" rel="alternate" type="text/html" title="a post that can be cited"/><published>2024-04-28T15:06:00+00:00</published><updated>2024-04-28T15:06:00+00:00</updated><id>https://nsd9696.github.io/blog/2024/post-citation</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/post-citation/"><![CDATA[<p>This is an example post that can be cited. The content of the post ends here, while the citation information is automatically provided below. The only thing needed is for you to set the <code class="language-plaintext highlighter-rouge">citation</code> key in the front matter to <code class="language-plaintext highlighter-rouge">true</code>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="citation"/><summary type="html"><![CDATA[this is what a post that can be cited looks like]]></summary></entry><entry><title type="html">a post with pseudo code</title><link href="https://nsd9696.github.io/blog/2024/pseudocode/" rel="alternate" type="text/html" title="a post with pseudo code"/><published>2024-04-15T00:01:00+00:00</published><updated>2024-04-15T00:01:00+00:00</updated><id>https://nsd9696.github.io/blog/2024/pseudocode</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/pseudocode/"><![CDATA[<p>This is an example post with some pseudo code rendered by <a href="https://github.com/SaswatPadhi/pseudocode.js">pseudocode</a>. The example presented here is the same as the one in the <a href="https://saswat.padhi.me/pseudocode.js/">pseudocode.js</a> documentation, with only one simple but important change: everytime you would use <code class="language-plaintext highlighter-rouge">$</code>, you should use <code class="language-plaintext highlighter-rouge">$$</code> instead. Also, note that the <code class="language-plaintext highlighter-rouge">pseudocode</code> key in the front matter is set to <code class="language-plaintext highlighter-rouge">true</code> to enable the rendering of pseudo code. As an example, using this code:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">pseudocode
-</span><span class="sb">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Generates:</p> <pre><code class="language-pseudocode">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry><entry><title type="html">a post with code diff</title><link href="https://nsd9696.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://nsd9696.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
-</span><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")
-</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
-</span><span class="sb">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
---- a/sample.js
-+++ b/sample.js
-@@ -1 +1 @@
--console.log("Hello World!")
-+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sun, 9 Oct 2016 16:41:54 +0100
-Subject: [PATCH 1/2] Initial template override support
+RD (Reliable Datagram):
+서버 A ──회선──→ 아무에게나 보낼 수 있음
+→ 전용 회선 불필요 + 전달 보장 + 순서 보장
+</code></pre></div></div> <h3 id="rd가-실제로-사용되지-않는-이유">RD가 실제로 사용되지 않는 이유</h3> <p>다만, InfiniBand 에서 실질적으로 RD 를 잘 사용하고 있지는 않습니다. 이유는 결국 하드웨어 구현 난이도 인데요.</p> <ul> <li><strong>RC</strong> 는 QP 하나당 상태를 하나만 추적하면 되고, <strong>UD</strong>는 아무에게나 보내는 것이기 때문에 사실상 상태 추적을 할 필요가 없습니다.</li> <li>하지만 <strong>RD</strong>의 NIC 는 모든 통신 상대별 상태를 추적해야 합니다: <ul> <li>“서버 B에게 패킷 3까지 보냈고 ACK 2까지 받음”</li> <li>“서버 C에게 패킷 7까지 보냈고 ACK 5까지 받음”</li> <li>“서버 D에게 패킷 1 보냈고 ACK 아직 없음”</li> <li>“서버 E에게 패킷 12까지 보냈고 ACK 10까지 받음”</li> <li>… × 통신하는 모든 상대방</li> </ul> </li> <li>예를 들어, 하나의 QP가 1000개의 서버와 통신하면 1000개의 상태를 NIC 에서 모두 관리해야 합니다. 이때 NIC 칩 안의 SRAM 에 저장해야 하는데 이게 비싸고 작습니다.</li> <li>따라서 NVIDIA 입장에서는 RC 나 UD 로도 커버가 가능한데 RD까지의 수요가 없었고 비용 대비 효과가 안 맞아서 deprecate 합니다.</li> </ul> <h3 id="srd-scalable-reliable-datagram">SRD (Scalable Reliable Datagram)</h3> <p>그러면 AWS 에서 만든 SRD는 뭐가 다른가? <strong>RD 에서의 순서 보장을 포기했습니다.</strong></p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RD:   패킷 1 → 패킷 2 → 패킷 3  (반드시 이 순서로 도착)
+      경로: A ━━━━━━━━━━━━━→ B  (하나의 경로)
 
----
- scripts/hulk.js                    |  4 ++--
- src/diff2html.js                   |  3 +--
- src/file-list-printer.js           | 11 ++++++++---
- src/hoganjs-utils.js               | 29 +++++++++++++++++------------
- src/html-printer.js                |  6 ++++++
- src/line-by-line-printer.js        |  6 +++++-
- src/side-by-side-printer.js        |  6 +++++-
- test/file-list-printer-tests.js    |  2 +-
- test/hogan-cache-tests.js          | 18 +++++++++++++++---
- test/line-by-line-tests.js         |  3 +--
- test/side-by-side-printer-tests.js |  3 +--
- 11 files changed, 62 insertions(+), 29 deletions(-)
+SRD:  패킷 1 ──경로 A──→ ┐
+      패킷 2 ──경로 B──→ ├→ 도착 후 소프트웨어가 재정렬
+      패킷 3 ──경로 C──→ ┘
+</code></pre></div></div> <p>순서를 포기하면 여러 경로에 패킷을 분산시킬 수 있고, 한 경로가 막혀도 다른 경로로 보내면 되기 때문에 이더넷 환경에서 유리합니다. 수천 대의 서버가 네트워크를 공유하는 환경에서는 이런 SRD 가 안정적이기 때문에 채택했다고 보시면 될 것 같습니다.</p> <hr/> <h2 id="3-efa--gpudirect-rdma">3. EFA → GPUDirect RDMA</h2> <p>EFA 를 사용했을 때 GPUDirect RDMA 흐름은 다음과 같습니다.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>노드 A                                          노드 B
+┌─────────┐                                    ┌─────────┐
+│ GPU HBM │                                    │ GPU HBM │
+└────┬────┘                                    └────▲────┘
+     │ PCIe                                         │ PCIe
+┌────▼──────┐    이더넷    ┌────────┐    이더넷    ┌────┴──────┐
+│ Nitro(EFA)│───케이블────▶│ 스위치   │───케이블────▶│ Nitro(EFA)│
+└───────────┘            └────────┘             └───────────┘
+</code></pre></div></div> <p>물론 이때 각 노드별 GPU 끼리의 통신에는 NVLink를 사용합니다.</p> <h3 id="infiniband-vs-efa-성능-비교">InfiniBand vs EFA 성능 비교</h3> <p>다만, EFA 가 InfiniBand 와 비교했을 때 performance 가 나오는가? 이를 비교하는 벤치마크를 요약하면 다음과 같습니다.</p> <table> <thead> <tr> <th>항목</th> <th>InfiniBand</th> <th>EFA/이더넷</th> <th>결론</th> </tr> </thead> <tbody> <tr> <td><strong>소규모 메시지 지연</strong></td> <td>~1 µs</td> <td>~10 µs</td> <td>IB 압도적 우위</td> </tr> <tr> <td><strong>대용량 전송 대역폭</strong></td> <td>~200 Gbps</td> <td>~200 Gbps</td> <td>비슷</td> </tr> <tr> <td><strong>AI 학습 (대규모)</strong></td> <td>기준선</td> <td>적절한 튜닝 시 유사</td> <td>차이 미미</td> </tr> <tr> <td><strong>AI 추론 (Decode)</strong></td> <td>유리</td> <td>평균 1.0166% 느림</td> <td>IB 약간 유리</td> </tr> <tr> <td><strong>비용</strong></td> <td>1.5~2.5배 비쌈</td> <td>기준선</td> <td>이더넷 유리</td> </tr> </tbody> </table> <blockquote> <p>출처: <a href="https://www.wwt.com/blog/the-battle-of-ai-networking-ethernet-vs-infiniband">WWT - The Battle of AI Networking</a>, <a href="https://www.vitextech.com/blogs/blog/infiniband-vs-ethernet-for-ai-clusters-effective-gpu-networks-in-2025">Vitex Tech - InfiniBand vs Ethernet</a></p> </blockquote> <p>전반적으로 성능 자체는 InfiniBand가 좋은 것으로 보입니다. 다만, AWS 환경에 셋업이 되어 있는 것을 고려한다면 EFA가 유리할 수 있지만 최근 neo-cloud GPU 가격이 AWS 에 비해 저렴하게 많이 나오는 편인 것을 고려하면 InfiniBand가 더 나은 선택일 수 있을 것 같습니다.</p> <hr/> <h2 id="4-efa-위에서-pd-disagg-vllm-serving">4. EFA 위에서 P/D Disagg vLLM Serving</h2> <p>저의 경우 이번에 작업하던 내용이 A100 환경에서 Prefill/Decode Disagg 를 구성하는 것이였습니다. 해당 경우, EFA 가 직접적으로 관여하는 구간은 kv_transfer 입니다.</p> <h3 id="kv-cache-transfer-소프트웨어-스택">KV Cache Transfer 소프트웨어 스택</h3> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──────────────────────────────────────────────────────────
+│  vLLM NixlConnector
+│  Prefill 완료 → KV Cache 블록 목록 + 원격 블록 매핑
+│  비동기 전송 요청 생성
+├──────────────────────────────────────────────────────────
+│  NIXL (NVIDIA Inference Xfer Library)
+│  Agent: 메모리 등록, 메타데이터 관리, 백엔드 선택
+│  create_xfer_req → post_xfer_req (비동기, one-sided)
+├──────────────────────────────────────────────────────────
+│  ┌─ libfabric 경로 (권장) ──────────────────────────┐
+│  │  fi_write / fi_read (RDMA)                     │
+│  │  또는 fi_send / fi_recv (메시지)                  │
+│  │  FI_EP_RDM 엔드포인트                             │
+│  └────────────────────────────────────────────────┘
+├──────────────────────────────────────────────────────────
+│  EFA Kernel Driver (efa.ko)
+│  RDMA subsystem, ibverbs 인터페이스
+│  Memory Registration (GPU 메모리 → NIC에 등록)
+│  GPUDirect RDMA: GPU HBM → PCIe → NIC 직접 전송
+├──────────────────────────────────────────────────────────
+│  Nitro Card (하드웨어)
+│  SRD 프로토콜 엔진, 패킷 스프레이, 혼잡 제어
+├──────────────────────────────────────────────────────────
+│  AWS Network Fabric (이더넷)
+│  ECMP 멀티패스, 스파인-리프 토폴로지
+└──────────────────────────────────────────────────────────
+</code></pre></div></div> <p>이제 EFA 위의 각각의 구성요소들을 구체적으로 봐보겠습니다.</p> <h3 id="nixl-nvidia-inference-xfer-library">NIXL (NVIDIA Inference Xfer Library)</h3> <p>NIXL은 GPU간의 메모리 전송을 위한 전용 라이브러리입니다. 기존의 NCCL 은 AllReduce 나 All-to-All 과 같은 집합 통신에는 특화되어 있는데, 특정 GPU → GPU 로 메모리 블록을 직접 옮기는 point-to-point 전송에는 적합하지 않아서 이를 위해 만들어진 것이 NIXL 입니다.</p> <p>P/D Disagg 에서의 <code class="language-plaintext highlighter-rouge">Prefill GPU ──RDMA Write──▶ Decode GPU</code> 과정이나, Decode 인스턴스 간의 마이그레이션 <code class="language-plaintext highlighter-rouge">Decode GPU (서버 A, 과부하) ──RDMA──▶ Decode GPU (서버 B, 여유)</code> 이런 경우에서 사용하게 됩니다.</p> <p>이때, NIXL 에는 NIXL Agent 가 있는데 메모리 등록이나, 메타데이터(GPU 메모리 주소, RDMA key, NIC 주소 등) 관리, 실제 전송을 수행하는 플러그인 백엔드(UCX, libfabric) 등을 관리합니다.</p> <h3 id="ucx-unified-communication-x">UCX (Unified Communication X)</h3> <p>본래 InfiniBand 를 위한 범용 통신 프레임워크이며 내부적으로 RC, UD, TCP, cuda_ipc (같은 노드 GPU 간), cuda_copy(GPU ↔ CPU 복사) 등의 프로토콜을 지원합니다.</p> <p>다만, EFA 에서는 <code class="language-plaintext highlighter-rouge">UCX_TLS=ib</code> 를 설정하면 사용이 가능한데, 이는 EFA가 ibverbs 호환 인터페이스를 제공하기 때문입니다.</p> <ul> <li><a href="https://github.com/amzn/amzn-drivers/blob/master/kernel/linux/efa/src/efa_verbs.c">EFA ibverbs 구현 (AWS driver)</a></li> <li><a href="https://github.com/linux-rdma/rdma-core/blob/master/providers/efa/efa.c">rdma-core EFA provider</a></li> </ul> <h3 id="libfabric-open-fabrics-interface">libfabric (Open Fabrics Interface)</h3> <p>네트워크 하드웨어 벤더들의 표준 추상화 계층입니다. 내부적으로 EFA provider, TCP provider, SHM provider 등으로 구성되어 있습니다.</p> <p>공식적으로는 libfabric 을 사용하는 것이 맞는 것으로 보이는데 실제 작업 과정에서는 UCX 쪽이 dependency 가 잘 맞고 libfabric 쪽에서는 GPU memory bad address 이슈가 지속적으로 발생해서 우선 저의 경우는 deprecate 했습니다.</p> <h3 id="aws-ofi-nccl-optional">aws-ofi-nccl (optional)</h3> <p>저의 경우 P/D Disagg 구성이었기 때문에 NCCL 사용 필요성이 따로 없었습니다. 다만, 모델 자체가 커서 multi-node 로 구성하거나 multi-node train의 경우 NCCL 이 필요하고 EFA 환경에서는 aws-ofi-nccl 이 필요합니다.</p> <p>본래 NCCL 은 InfiniBand 를 위해 설계되어서 IB Verbs API 를 직접 호출하는 <code class="language-plaintext highlighter-rouge">net_ib</code> 전송이 내장되어 있는데 aws-ofi-nccl 은 NCCL의 네트워크 플러그인 API 를 구현해서 이를 libfabric 의 RDM 인터페이스로 변환합니다.</p> <h3 id="efa-nv-peermem">efa-nv-peermem</h3> <p>NIC 가 GPU 메모리에 직접 접근할 수 있게 해주는 커널 모듈입니다. 본래는 nvidia-peermem 인데 EFA 에서는 efa-nv-peermem 을 사용합니다.</p> <p>기본적으로 NIC 는 CPU 메모리만 읽을 수 있기 때문에 GPU 와 NIC, 이 둘을 연결하는게 efa-nv-peermem인겁니다. (GPUDirect RDMA 모듈입니다)</p>]]></content><author><name></name></author><category term="infrastructure"/><category term="gpu"/><category term="networking"/><category term="efa"/><category term="infiniband"/><category term="rdma"/><category term="vllm"/><summary type="html"><![CDATA[AWS EFA 환경에서의 멀티노드 GPU 통신, InfiniBand vs EFA 비교, vLLM P/D Disagg 구성까지]]></summary></entry><entry xml:lang="en"><title type="html">MoE Expert FFN Backend: experts_implementation</title><link href="https://nsd9696.github.io/blog/2026/moe-experts-implementation-backend-en/" rel="alternate" type="text/html" title="MoE Expert FFN Backend: experts_implementation"/><published>2026-01-30T10:00:00+00:00</published><updated>2026-01-30T10:00:00+00:00</updated><id>https://nsd9696.github.io/blog/2026/moe-experts-implementation-backend-en</id><content type="html" xml:base="https://nsd9696.github.io/blog/2026/moe-experts-implementation-backend-en/"><![CDATA[<h2 id="1-experts_implementation">1. experts_implementation</h2> <p>A <a href="https://github.com/huggingface/transformers/pull/42697">PR (#42697)</a> that adds support for selecting the Expert FFN computation method in MoE models has been merged into HuggingFace Transformers. Just like how <code class="language-plaintext highlighter-rouge">attn_implementation</code> allowed you to choose the attention computation backend, you can now hook into the expert computation and run it with the backend of your choice.</p> <hr/> <h2 id="2-eager-batched_mm-grouped_mm">2. eager, batched_mm, grouped_mm</h2> <p>Fundamentally, expert FFN follows the same logic: the router selects top-k experts, performs hidden state projection with expert parameters (<code class="language-plaintext highlighter-rouge">gate_up_proj</code>, <code class="language-plaintext highlighter-rouge">down_proj</code>), and then computes a weighted sum using routing weights. The key difference lies in <strong>how the per-expert matrix multiplications are performed</strong>.</p> <h3 id="eager-loop-based-reference-implementation">eager: Loop-Based Reference Implementation</h3> <p>This is the most intuitive approach. It iterates through activated experts one by one using a Python loop, selects only the tokens routed to each expert, and performs per-expert projection on those tokens. However, because it uses <code class="language-plaintext highlighter-rouge">torch.where</code> to select tokens assigned to each expert, it becomes difficult to use with <code class="language-plaintext highlighter-rouge">torch.compile</code> with the <code class="language-plaintext highlighter-rouge">fullgraph=True</code> option.</p> <h3 id="batched_mm">batched_mm</h3> <p><code class="language-plaintext highlighter-rouge">batched_mm</code> duplicates the selected expert’s weights for each token, stacks them into a 3D tensor, and performs batched matrix multiplication all at once using <code class="language-plaintext highlighter-rouge">torch.bmm</code>.</p> <p><code class="language-plaintext highlighter-rouge">torch.bmm</code> stands for Batched Matrix Multiplication — it multiplies pairs of identically-sized matrices all at once.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Routing result (top_k=3):
+  token0 → Expert0, Expert2, Expert5
+  token1 → Expert1, Expert2, Expert3
 
-diff --git a/scripts/hulk.js b/scripts/hulk.js
-index 5a793c18..a4b1a4d5 100755
---- a/scripts/hulk.js
-+++ b/scripts/hulk.js
-@@ -173,11 +173,11 @@ function namespace(name) {
- // write a template foreach file that matches template extension
- templates = extractFiles(options.argv.remain)
-   .map(function(file) {
--    var openedFile = fs.readFileSync(file, 'utf-8');
-+    var openedFile = fs.readFileSync(file, 'utf-8').trim();
-     var name;
-     if (!openedFile) return;
-     name = namespace(path.basename(file).replace(/\..*$/, ''));
--    openedFile = removeByteOrderMark(openedFile.trim());
-+    openedFile = removeByteOrderMark(openedFile);
-     openedFile = wrap(file, name, openedFile);
-     if (!options.outputdir) return openedFile;
-     fs.writeFileSync(path.join(options.outputdir, name + '.js')
-diff --git a/src/diff2html.js b/src/diff2html.js
-index 21b0119e..64e138f5 100644
---- a/src/diff2html.js
-+++ b/src/diff2html.js
-@@ -7,7 +7,6 @@
+┌──────────────────────────────────────────────────────────────
+│  1) Duplicate expert weights for each (token, expert) pair
+│
+│  token0 × Expert0 weight copy ─┐
+│  token0 × Expert2 weight copy ─┤
+│  token0 × Expert5 weight copy ─┤  ← Stack into 3D tensor
+│  token1 × Expert1 weight copy ─┤
+│  token1 × Expert2 weight copy ─┤
+│  token1 × Expert3 weight copy ─┘
+│
+│  ⚠️ batch_size × seq_len × top_k copies → memory increase
+├──────────────────────────────────────────────────────────────
+│  2) Process everything in a single torch.bmm call
+│
+│  [token0] × [Expert0 W] → [out0_e0] ┐
+│  [token0] × [Expert2 W] → [out0_e2] ├─ token0: weighted sum of
+│  [token0] × [Expert5 W] → [out0_e5] ┘  3 results by routing weight
+│
+│  [token1] × [Expert1 W] → [out1_e1] ┐
+│  [token1] × [Expert2 W] → [out1_e2] ├─ token1: weighted sum of
+│  [token1] × [Expert3 W] → [out1_e3] ┘  3 results by routing weight
+│
+│  → Single bmm call (batch size = num_tokens × top_k = 6)
+└──────────────────────────────────────────────────────────────
+</code></pre></div></div> <p>Since it is compatible with <code class="language-plaintext highlighter-rouge">torch.compile</code>, it supports <code class="language-plaintext highlighter-rouge">fullgraph</code>. However, because it copies expert weights, memory usage can more than double compared to eager — making it more advantageous for short sequences or small batch sizes.</p> <h3 id="grouped_mm">grouped_mm</h3> <p><code class="language-plaintext highlighter-rouge">grouped_mm</code> uses <code class="language-plaintext highlighter-rouge">torch._grouped_mm</code> to support Grouped GEMM. This approach does not copy weights. Instead, it groups tokens by expert and processes all expert projections simultaneously using the Grouped GEMM kernel.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Routing result (top_k=3):
+  token0 → Expert0, Expert2, Expert5
+  token1 → Expert1, Expert2, Expert3
 
- (function() {
-   var diffParser = require('./diff-parser.js').DiffParser;
--  var fileLister = require('./file-list-printer.js').FileListPrinter;
-   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
+┌──────────────────────────────────────────────────────────────
+│  1) Sort tokens by expert
+│
+│  Original: [(t0,E0), (t0,E2), (t0,E5), (t1,E1), (t1,E2), (t1,E3)]
+│                    ↓ sort by expert
+│  Sorted: [(t0,E0) | (t1,E1) | (t0,E2),(t1,E2) | (t1,E3) | (t0,E5)]
+│          ├ E0:1 ┤├ E1:1 ┤├──── E2:2 ────┤├ E3:1 ┤├ E5:1 ┤
+│
+│  group_sizes = [1, 1, 2, 1, 1]
+├──────────────────────────────────────────────────────────────
+│  2) Process with a single Grouped GEMM call (no weight copy)
+│
+│  [token0] × [Expert0 W] → [out0_e0] ┐
+│  [token1] × [Expert1 W] → [out1_e1] │
+│  [token0] × [Expert2 W] → [out0_e2] │ ← Single Grouped GEMM
+│  [token1] × [Expert2 W] → [out1_e2] │
+│  [token1] × [Expert3 W] → [out1_e3] │
+│  [token0] × [Expert5 W] → [out0_e5] ┘
+│           ↑ E2 weight shared by 2 tokens without duplication
+├──────────────────────────────────────────────────────────────
+│  3) Restore results to original token order, weighted sum
+│
+│  token0: out0_e0 × w0 + out0_e2 × w1 + out0_e5 × w2 → final0
+│  token1: out1_e1 × w0 + out1_e2 × w1 + out1_e3 × w2 → final1
+└──────────────────────────────────────────────────────────────
+</code></pre></div></div> <p>Since weights are not duplicated, this approach is the most memory-efficient, and it particularly excels with long sequences and large batches.</p> <hr/> <h2 id="3-solar-open-100b-benchmark">3. Solar-Open 100B Benchmark</h2> <p>Since the PR showed significant performance differences, I ran benchmarks directly using Upstage’s Solar-Open model. Looking at just the Mean Latency, the differences were meaningful. <code class="language-plaintext highlighter-rouge">batched_mm</code> performed reasonably well with short, small inputs, but overall <code class="language-plaintext highlighter-rouge">grouped_mm</code> showed the best performance. Compared to eager, even without compile it was about 4x faster on average, and with compile applied the latency difference reached up to 10x.</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/solar_latency_summary-480.webp 480w,/assets/img/solar_latency_summary-800.webp 800w,/assets/img/solar_latency_summary-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/solar_latency_summary.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> <figcaption class="caption">Solar-Open 100B Latency Comparison (Experts Backend &amp; Torch Compile)</figcaption> </figure> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">upstage/solar-open-...</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">experts_implementation</span><span class="o">=</span><span class="sh">"</span><span class="s">grouped_mm</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># or "batched_mm", "eager"
+</span><span class="p">)</span>
+</code></pre></div></div> <p>Note that with <code class="language-plaintext highlighter-rouge">batched_mm</code> under <code class="language-plaintext highlighter-rouge">batch_size=4</code>, <code class="language-plaintext highlighter-rouge">seq_len=128</code> conditions, a memory spike was observed during computation in both compile default and no-compile cases. I left the results as-is without separate modifications for reference.</p> <hr/> <h2 id="4-wrapping-up">4. Wrapping Up</h2> <p>It would be worth considering these backend options for MoE model inference. However, since vLLM has its own <code class="language-plaintext highlighter-rouge">fused_moe</code> kernel, it cannot be directly used there. I’ll cover the <code class="language-plaintext highlighter-rouge">fused_moe</code> kernel in a future post.</p>]]></content><author><name></name></author><category term="ml-engineering"/><category term="moe"/><category term="experts-implementation"/><category term="huggingface"/><category term="transformers"/><category term="torch-compile"/><category term="grouped-gemm"/><summary type="html"><![CDATA[Selecting Expert FFN computation backends (eager, batched_mm, grouped_mm) in HuggingFace Transformers and benchmarking with Solar-Open 100B]]></summary></entry><entry xml:lang="ko"><title type="html">MoE Expert FFN Backend: experts_implementation</title><link href="https://nsd9696.github.io/ko/blog/2026/moe-experts-implementation-backend/" rel="alternate" type="text/html" title="MoE Expert FFN Backend: experts_implementation"/><published>2026-01-30T10:00:00+00:00</published><updated>2026-01-30T10:00:00+00:00</updated><id>https://nsd9696.github.io/ko/blog/2026/moe-experts-implementation-backend</id><content type="html" xml:base="https://nsd9696.github.io/ko/blog/2026/moe-experts-implementation-backend/"><![CDATA[<h2 id="1-experts_implementation">1. experts_implementation</h2> <p>HuggingFace Transformers에 MoE 모델의 Expert FFN 연산 방식을 선택할 수 있도록 지원해주는 <a href="https://github.com/huggingface/transformers/pull/42697">PR (#42697)</a>이 머지되었습니다. 기존에 <code class="language-plaintext highlighter-rouge">attn_implementation</code>으로 어텐션 연산 백엔드를 선택할 수 있었던 것처럼, 이제 expert 연산도 hooking 해서 원하는 방식으로 돌릴 수 있게 되었습니다.</p> <hr/> <h2 id="2-eager-batched_mm-grouped_mm">2. eager, batched_mm, grouped_mm</h2> <p>기본적으로 expert FFN은 router가 top-k expert를 선택하고 나서 expert parameter(<code class="language-plaintext highlighter-rouge">gate_up_proj</code>, <code class="language-plaintext highlighter-rouge">down_proj</code>)로 hidden state projection을 한 다음, routing weight로 가중 합산하는 로직은 동일합니다. 다만 이때, <strong>expert 별 행렬 곱셈을 어떻게 하는가</strong>가 차이점입니다.</p> <h3 id="eager-루프-기반-레퍼런스-구현">eager: 루프 기반 레퍼런스 구현</h3> <p>가장 직관적인 방식이고, activated expert를 Python 루프로 하나씩 순회하면서 해당 expert에 routing 된 token들만 고르고, 해당 토큰들에 대해 per-expert projection을 수행합니다. 이때 <code class="language-plaintext highlighter-rouge">torch.where</code>를 사용해 expert에 할당된 토큰을 선택하는데, 이 과정 때문에 <code class="language-plaintext highlighter-rouge">torch.compile</code>을 <code class="language-plaintext highlighter-rouge">fullgraph=True</code> 옵션과 사용하기가 어려워집니다.</p> <h3 id="batched_mm">batched_mm</h3> <p><code class="language-plaintext highlighter-rouge">batched_mm</code>은 selected expert의 weight를 토큰마다 duplicate 해서 3D tensor로 쌓은 뒤, <code class="language-plaintext highlighter-rouge">torch.bmm</code>으로 한 번에 배치 행렬 곱셈을 수행하는 방식입니다.</p> <p><code class="language-plaintext highlighter-rouge">torch.bmm</code>은 Batched Matrix Multiplication의 약자로, 동일한 크기의 행렬 쌍들을 한 번에 곱합니다.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>라우팅 결과 (top_k=3):
+  token0 → Expert0, Expert2, Expert5
+  token1 → Expert1, Expert2, Expert3
 
-   function Diff2Html() {
-@@ -43,7 +42,7 @@
+┌──────────────────────────────────────────────────────────────
+│  1) 각 (토큰, expert) 쌍마다 expert weight를 복제해서 쌓기
+│
+│  token0 × Expert0 weight 복사 ─┐
+│  token0 × Expert2 weight 복사 ─┤
+│  token0 × Expert5 weight 복사 ─┤  ← 3D 텐서로 쌓기
+│  token1 × Expert1 weight 복사 ─┤
+│  token1 × Expert2 weight 복사 ─┤
+│  token1 × Expert3 weight 복사 ─┘
+│
+│  ⚠️ batch_size × seq_len × top_k 의 복사본이 발생 → 메모리 증가
+├──────────────────────────────────────────────────────────────
+│  2) torch.bmm 한 번으로 전부 처리
+│
+│  [token0] × [Expert0 W] → [out0_e0] ┐
+│  [token0] × [Expert2 W] → [out0_e2] ├─ token0: 3개 결과를
+│  [token0] × [Expert5 W] → [out0_e5] ┘  routing weight로 가중합
+│
+│  [token1] × [Expert1 W] → [out1_e1] ┐
+│  [token1] × [Expert2 W] → [out1_e2] ├─ token1: 3개 결과를
+│  [token1] × [Expert3 W] → [out1_e3] ┘  routing weight로 가중합
+│
+│  → 단일 bmm 호출 (배치 크기 = num_tokens × top_k = 6)
+└──────────────────────────────────────────────────────────────
+</code></pre></div></div> <p>특히, <code class="language-plaintext highlighter-rouge">torch.compile</code>에도 호환되기 때문에 <code class="language-plaintext highlighter-rouge">fullgraph</code> 지원이 가능해집니다. 다만, expert weight들을 copy 하기 때문에 메모리 사용량이 eager 대비 2배 이상 뛸 수 있다는 단점이 있어, 짧은 시퀀스나 작은 배치 사이즈에서 유리하다고 볼 수 있습니다.</p> <h3 id="grouped_mm">grouped_mm</h3> <p><code class="language-plaintext highlighter-rouge">grouped_mm</code>은 <code class="language-plaintext highlighter-rouge">torch._grouped_mm</code>을 사용하는 방식으로 Grouped GEMM을 지원합니다. 해당 방식은 weight copy를 하지 않고, 대신 token들을 expert 별로 grouping 한 뒤 Grouped GEMM 커널로 해당 expert의 projection을 동시에 처리합니다.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>라우팅 결과 (top_k=3):
+  token0 → Expert0, Expert2, Expert5
+  token1 → Expert1, Expert2, Expert3
 
-     var fileList = '';
-     if (configOrEmpty.showFiles === true) {
--      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
-+      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
-     }
-
-     var diffOutput = '';
-diff --git a/src/file-list-printer.js b/src/file-list-printer.js
-index e408d9b2..1e0a2c61 100644
---- a/src/file-list-printer.js
-+++ b/src/file-list-printer.js
-@@ -8,11 +8,16 @@
- (function() {
-   var printerUtils = require('./printer-utils.js').PrinterUtils;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var baseTemplatesPath = 'file-summary';
-   var iconsBaseTemplatesPath = 'icon';
-
--  function FileListPrinter() {
-+  function FileListPrinter(config) {
-+    this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   FileListPrinter.prototype.generateFileList = function(diffFiles) {
-@@ -38,5 +43,5 @@
-     });
-   };
-
--  module.exports.FileListPrinter = new FileListPrinter();
-+  module.exports.FileListPrinter = FileListPrinter;
- })();
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 9949e5fa..0dda08d7 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -8,18 +8,19 @@
- (function() {
-   var fs = require('fs');
-   var path = require('path');
--
-   var hogan = require('hogan.js');
-
-   var hoganTemplates = require('./templates/diff2html-templates.js');
-
--  var templatesPath = path.resolve(__dirname, 'templates');
-+  var extraTemplates;
-
--  function HoganJsUtils() {
-+  function HoganJsUtils(configuration) {
-+    this.config = configuration || {};
-+    extraTemplates = this.config.templates || {};
-   }
-
--  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
--    var template = this.template(namespace, view, configuration);
-+  HoganJsUtils.prototype.render = function(namespace, view, params) {
-+    var template = this.template(namespace, view);
-     if (template) {
-       return template.render(params);
-     }
-@@ -27,17 +28,16 @@
-     return null;
-   };
-
--  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
--    var config = configuration || {};
-+  HoganJsUtils.prototype.template = function(namespace, view) {
-     var templateKey = this._templateKey(namespace, view);
-
--    return this._getTemplate(templateKey, config);
-+    return this._getTemplate(templateKey);
-   };
-
--  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
-+  HoganJsUtils.prototype._getTemplate = function(templateKey) {
-     var template;
-
--    if (!config.noCache) {
-+    if (!this.config.noCache) {
-       template = this._readFromCache(templateKey);
-     }
-
-@@ -53,6 +53,7 @@
-
-     try {
-       if (fs.readFileSync) {
-+        var templatesPath = path.resolve(__dirname, 'templates');
-         var templatePath = path.join(templatesPath, templateKey);
-         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
-         template = hogan.compile(templateContent);
-@@ -66,12 +67,16 @@
-   };
-
-   HoganJsUtils.prototype._readFromCache = function(templateKey) {
--    return hoganTemplates[templateKey];
-+    return extraTemplates[templateKey] || hoganTemplates[templateKey];
-   };
-
-   HoganJsUtils.prototype._templateKey = function(namespace, view) {
-     return namespace + '-' + view;
-   };
-
--  module.exports.HoganJsUtils = new HoganJsUtils();
-+  HoganJsUtils.prototype.compile = function(templateStr) {
-+    return hogan.compile(templateStr);
-+  };
-+
-+  module.exports.HoganJsUtils = HoganJsUtils;
- })();
-diff --git a/src/html-printer.js b/src/html-printer.js
-index 585d5b66..13f83047 100644
---- a/src/html-printer.js
-+++ b/src/html-printer.js
-@@ -8,6 +8,7 @@
- (function() {
-   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
-   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
-+  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
-
-   function HtmlPrinter() {
-   }
-@@ -22,5 +23,10 @@
-     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
-   };
-
-+  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
-+    var fileListPrinter = new FileListPrinter(config);
-+    return fileListPrinter.generateFileList(diffJson);
-+  };
-+
-   module.exports.HtmlPrinter = new HtmlPrinter();
- })();
-diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
-index b07eb53c..d230bedd 100644
---- a/src/line-by-line-printer.js
-+++ b/src/line-by-line-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'line-by-line';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -19,6 +20,9 @@
-
-   function LineByLinePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
-diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
-index bbf1dc8d..5e3033b3 100644
---- a/src/side-by-side-printer.js
-+++ b/src/side-by-side-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'side-by-side';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -26,6 +27,9 @@
-
-   function SideBySidePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
-diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
-index a502a46f..60ea3208 100644
---- a/test/file-list-printer-tests.js
-+++ b/test/file-list-printer-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
-+var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
-
- describe('FileListPrinter', function() {
-   describe('generateFileList', function() {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 190bf6f8..3bb754ac 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
-+var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
- var diffParser = require('../src/diff-parser.js').DiffParser;
-
- describe('HoganJsUtils', function() {
-@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
-       });
-       assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should render view without cache', function() {
-       var result = HoganJsUtils.render('generic', 'empty-diff', {
-         contentClass: 'd2h-code-line',
-         diffParser: diffParser
-       }, {noCache: true});
--      assert.equal(emptyDiffHtml + '\n', result);
-+      assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should return null if template is missing', function() {
--      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
-+      var result = hoganUtils.render('generic', 'missing-template', {});
-       assert.equal(null, result);
-     });
-+
-+    it('should allow templates to be overridden', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+
-+      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
-index 1cd92073..8869b3df 100644
---- a/test/line-by-line-tests.js
-+++ b/test/line-by-line-tests.js
-@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expected, fileHtml);
-     });
-@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                &lt;/tbody&gt;\n' +
-         '            &lt;/table&gt;\n' +
-         '        &lt;/div&gt;\n' +
-diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
-index 76625f8e..771daaa5 100644
---- a/test/side-by-side-printer-tests.js
-+++ b/test/side-by-side-printer-tests.js
-@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expectedRight, fileHtml.right);
-       assert.equal(expectedLeft, fileHtml.left);
-@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                    &lt;/tbody&gt;\n' +
-         '                &lt;/table&gt;\n' +
-         '            &lt;/div&gt;\n' +
-
-From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sat, 15 Oct 2016 13:21:22 +0100
-Subject: [PATCH 2/2] Allow uncompiled templates
-
----
- README.md                 |  3 +++
- src/hoganjs-utils.js      |  7 +++++++
- test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
- 3 files changed, 33 insertions(+), 1 deletion(-)
-
-diff --git a/README.md b/README.md
-index 132c8a28..46909f25 100644
---- a/README.md
-+++ b/README.md
-@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
-   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
-   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
-   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
-+  - `templates`: object with previously compiled templates to replace parts of the html
-+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
-+  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
-
- ## Diff2HtmlUI Helper
-
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 0dda08d7..b2e9c275 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -17,6 +17,13 @@
-   function HoganJsUtils(configuration) {
-     this.config = configuration || {};
-     extraTemplates = this.config.templates || {};
-+
-+    var rawTemplates = this.config.rawTemplates || {};
-+    for (var templateName in rawTemplates) {
-+      if (rawTemplates.hasOwnProperty(templateName)) {
-+        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
-+      }
-+    }
-   }
-
-   HoganJsUtils.prototype.render = function(namespace, view, params) {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 3bb754ac..a34839c0 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
-       assert.equal(null, result);
-     });
-
--    it('should allow templates to be overridden', function() {
-+    it('should allow templates to be overridden with compiled templates', function() {
-       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-
-       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
-       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-     });
-+
-+    it('should allow templates to be overridden with uncompiled templates', function() {
-+      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
-+
-+      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-+
-+    it('should allow templates to be overridden giving priority to compiled templates', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
-+
-+      var config = {
-+        templates: {'generic-empty-diff': emptyDiffTemplate},
-+        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
-+      };
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry><entry><title type="html">a post with advanced image components</title><link href="https://nsd9696.github.io/blog/2024/advanced-images/" rel="alternate" type="text/html" title="a post with advanced image components"/><published>2024-01-27T11:46:00+00:00</published><updated>2024-01-27T11:46:00+00:00</updated><id>https://nsd9696.github.io/blog/2024/advanced-images</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/advanced-images/"><![CDATA[<p>This is an example post with advanced image components.</p> <h2 id="image-slider">Image Slider</h2> <p>This is a simple image slider. It uses the <a href="https://swiperjs.com/">Swiper</a> library. Check the <a href="https://swiperjs.com/demos">examples page</a> for more information of what you can achieve with it.</p> <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true"> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/9-480.webp 480w,/assets/img/9-800.webp 800w,/assets/img/9-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/9.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/7-480.webp 480w,/assets/img/7-800.webp 800w,/assets/img/7-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/7.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/8-480.webp 480w,/assets/img/8-800.webp 800w,/assets/img/8-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/8.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/10-480.webp 480w,/assets/img/10-800.webp 800w,/assets/img/10-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/10.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/12-480.webp 480w,/assets/img/12-800.webp 800w,/assets/img/12-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/12.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> </swiper-container> <h2 id="image-comparison-slider">Image Comparison Slider</h2> <p>This is a simple image comparison slider. It uses the <a href="https://img-comparison-slider.sneas.io/">img-comparison-slider</a> library. Check the <a href="https://img-comparison-slider.sneas.io/examples.html">examples page</a> for more information of what you can achieve with it.</p> <img-comparison-slider> <figure slot="first"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <figure slot="second"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic_color-480.webp 480w,/assets/img/prof_pic_color-800.webp 800w,/assets/img/prof_pic_color-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/prof_pic_color.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </img-comparison-slider>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what advanced image components could look like]]></summary></entry><entry><title type="html">a post with vega lite</title><link href="https://nsd9696.github.io/blog/2024/vega-lite/" rel="alternate" type="text/html" title="a post with vega lite"/><published>2024-01-27T00:20:00+00:00</published><updated>2024-04-14T04:30:00+00:00</updated><id>https://nsd9696.github.io/blog/2024/vega-lite</id><content type="html" xml:base="https://nsd9696.github.io/blog/2024/vega-lite/"><![CDATA[<p>This is an example post with some <a href="https://vega.github.io/vega-lite/">vega lite</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">vega_lite
-</span><span class="sb">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-vega_lite">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}
-</code></pre> <p>This plot supports both light and dark themes.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included vega lite code could look like]]></summary></entry></feed>
+┌──────────────────────────────────────────────────────────────
+│  1) 토큰을 expert 별로 정렬 (sort by expert)
+│
+│  원본: [(t0,E0), (t0,E2), (t0,E5), (t1,E1), (t1,E2), (t1,E3)]
+│                  ↓ sort by expert
+│  정렬 후: [(t0,E0) | (t1,E1) | (t0,E2),(t1,E2) | (t1,E3) | (t0,E5)]
+│           ├ E0:1 ┤├ E1:1 ┤├──── E2:2 ────┤├ E3:1 ┤├ E5:1 ┤
+│
+│  group_sizes = [1, 1, 2, 1, 1]
+├──────────────────────────────────────────────────────────────
+│  2) weight 복제 없이 Grouped GEMM 한 번으로 처리
+│
+│  [token0] × [Expert0 W] → [out0_e0] ┐
+│  [token1] × [Expert1 W] → [out1_e1] │
+│  [token0] × [Expert2 W] → [out0_e2] │ ← 단일 Grouped GEMM 호출
+│  [token1] × [Expert2 W] → [out1_e2] │
+│  [token1] × [Expert3 W] → [out1_e3] │
+│  [token0] × [Expert5 W] → [out0_e5] ┘
+│           ↑ E2 weight를 2개 토큰이 복제 없이 공유
+├──────────────────────────────────────────────────────────────
+│  3) 결과를 원래 토큰 순서로 복원 후 routing weight로 가중합
+│
+│  token0: out0_e0 × w0 + out0_e2 × w1 + out0_e5 × w2 → final0
+│  token1: out1_e1 × w0 + out1_e2 × w1 + out1_e3 × w2 → final1
+└──────────────────────────────────────────────────────────────
+</code></pre></div></div> <p>weight를 복제하지 않기 때문에 메모리 효율이 가장 좋고, 특히 긴 시퀀스나 큰 배치에서 강점을 보입니다.</p> <hr/> <h2 id="3-solar-open-100b-benchmark">3. Solar-Open 100B Benchmark</h2> <p>PR 상에서 성능 차이가 꽤 난다고 해서, 이번에 Upstage의 Solar-Open 모델로 직접 벤치마킹을 돌려봤습니다. Mean Latency 기준으로만 봐도 유의미한 차이가 확인됐는데요. <code class="language-plaintext highlighter-rouge">batched_mm</code>은 짧고 작은 입력에서 성능이 괜찮은 편이었지만, 전반적으로는 <code class="language-plaintext highlighter-rouge">grouped_mm</code>이 가장 좋은 성능을 보여줬습니다. eager 대비로 따져보면, compile 없이도 평균 4배, compile을 적용했을 때는 최대 10배까지 latency 차이가 나는 걸 확인할 수 있었습니다.</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/solar_latency_summary-480.webp 480w,/assets/img/solar_latency_summary-800.webp 800w,/assets/img/solar_latency_summary-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/solar_latency_summary.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> <figcaption class="caption">Solar-Open 100B Latency Comparison (Experts Backend &amp; Torch Compile)</figcaption> </figure> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">upstage/solar-open-...</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">experts_implementation</span><span class="o">=</span><span class="sh">"</span><span class="s">grouped_mm</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># 또는 "batched_mm", "eager"
+</span><span class="p">)</span>
+</code></pre></div></div> <p>다만, <code class="language-plaintext highlighter-rouge">batched_mm</code>에서 <code class="language-plaintext highlighter-rouge">batch_size=4</code>, <code class="language-plaintext highlighter-rouge">seq_len=128</code> 조건일 때 compile default와 no-compile 케이스에서 연산 과정 중 memory spike가 관찰됐습니다. 이 부분은 별도로 수정하지 않고 결과를 그대로 남겨두었으니 참고 부탁드립니다.</p> <hr/> <h2 id="4-마무리">4. 마무리</h2> <p>MoE model inference에서 해당 backend option을 고려하면 좋을 것 같습니다. 다만, vLLM에서는 자체적인 <code class="language-plaintext highlighter-rouge">fused_moe</code> kernel이 있기 때문에 바로 사용이 어렵습니다. 해당 <code class="language-plaintext highlighter-rouge">fused_moe</code> kernel은 이후 포스트에서 한번 다뤄보겠습니다.</p>]]></content><author><name></name></author><category term="ml-engineering"/><category term="moe"/><category term="experts-implementation"/><category term="huggingface"/><category term="transformers"/><category term="torch-compile"/><category term="grouped-gemm"/><summary type="html"><![CDATA[HuggingFace Transformers에서 MoE 모델의 Expert FFN 연산 백엔드(eager, batched_mm, grouped_mm)를 선택하고, Solar-Open 100B로 벤치마크한 결과]]></summary></entry></feed>
