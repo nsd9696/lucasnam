@@ -29,6 +29,7 @@ latest_posts:
 AI Research Engineer who can GTM. Currently an AI Engineer at [VESSL AI](https://vessl.ai/) 🚀. I'm a generalist across the AI research field — I enjoy going deep wherever the problem takes me.
 
 **Research & Engineering topics I've worked on:**
+
 - **Training & Optimization** — Distributed training systems for object detection, model compression with federated learning
 - **LLM** — Interpretability, Mixture of Experts, serving optimization
 - **AI Infrastructure** — LLM serving backends, AI platform engineering

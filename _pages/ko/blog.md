@@ -9,6 +9,7 @@ lang_alt: /blog/
 ---
 
 {% include locale.liquid %}
+
 <div class="post">
 
 {% assign blog_name_size = site.blog_name | size %}
@@ -49,14 +50,14 @@ lang_alt: /blog/
   </div>
   {% endif %}
 
-  {% assign all_posts = site.posts %}
-  {% assign ko_posts = "" | split: "" %}
-  {% for post in all_posts %}
-    {% assign post_lang = post.lang | default: "en" %}
-    {% if post_lang == "ko" %}
-      {% assign ko_posts = ko_posts | push: post %}
-    {% endif %}
-  {% endfor %}
+{% assign all_posts = site.posts %}
+{% assign ko_posts = "" | split: "" %}
+{% for post in all_posts %}
+{% assign post_lang = post.lang | default: "en" %}
+{% if post_lang == "ko" %}
+{% assign ko_posts = ko_posts | push: post %}
+{% endif %}
+{% endfor %}
 
   <ul class="post-list">
     {% for post in ko_posts %}
@@ -139,8 +140,9 @@ lang_alt: /blog/
 
   </ul>
 
-  {% if ko_posts.size == 0 %}
-    <p>{{ t.blog.no_posts }}</p>
-  {% endif %}
+{% if ko_posts.size == 0 %}
+
+<p>{{ t.blog.no_posts }}</p>
+{% endif %}
 
 </div>
