@@ -1,17 +1,17 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: 프로젝트
+permalink: /ko/projects/
+description: 프로젝트 모음입니다.
 nav: false
 nav_order: 3
-lang: en
-lang_alt: /ko/projects/
+lang: ko
+lang_alt: /projects/
 display_categories: [work, fun]
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
+<!-- pages/ko/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

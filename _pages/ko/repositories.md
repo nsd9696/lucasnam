@@ -1,17 +1,17 @@
 ---
 layout: page
-permalink: /repositories/
-title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+permalink: /ko/repositories/
+title: 저장소
+description: GitHub 저장소 목록입니다. `_data/repositories.yml`에서 `github_users`와 `github_repos` 목록을 수정하세요.
 nav: false
 nav_order: 4
-lang: en
-lang_alt: /ko/repositories/
+lang: ko
+lang_alt: /repositories/
 ---
 
 {% if site.data.repositories.github_users %}
 
-## GitHub users
+## GitHub 사용자
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% for user in site.data.repositories.github_users %}
@@ -39,7 +39,7 @@ lang_alt: /ko/repositories/
 
 {% if site.data.repositories.github_repos %}
 
-## GitHub Repositories
+## GitHub 저장소
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% for repo in site.data.repositories.github_repos %}

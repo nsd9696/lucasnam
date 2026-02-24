@@ -23,7 +23,7 @@
       class="newsletter-form-button"
       style="justify-content: {% if include.left %}flex-start{% elsif include.right %}flex-end{% else %}center{% endif %}"
     >
-      subscribe
+      {{ t.newsletter.subscribe }}
     </button>
 
     <button
@@ -31,7 +31,7 @@
       class="newsletter-loading-button"
       style="justify-content: {% if include.left %}flex-start{% elsif include.right %}flex-end{% else %}center{% endif %}"
     >
-      Please wait...
+      {{ t.newsletter.please_wait }}
     </button>
   </form>
 
@@ -39,14 +39,14 @@
     class="newsletter-success"
     style="justify-content: {% if include.left %}flex-start{% elsif include.right %}flex-end{% else %}center{% endif %}"
   >
-    <p class="newsletter-success-message">You're subscribed!</p>
+    <p class="newsletter-success-message">{{ t.newsletter.subscribed }}</p>
   </div>
 
   <div
     class="newsletter-error"
     style="justify-content: {% if include.left %}flex-start{% elsif include.right %}flex-end{% else %}center{% endif %}"
   >
-    <p class="newsletter-error-message">Oops! Something went wrong, please try again</p>
+    <p class="newsletter-error-message">{{ t.newsletter.error }}</p>
   </div>
 
   <button
@@ -55,7 +55,7 @@
     onmouseout='this.style.textDecoration="none"'
     onmouseover='this.style.textDecoration="underline"'
   >
-    &larr; Back
+    &larr; {{ t.newsletter.back }}
   </button>
 </div>
 

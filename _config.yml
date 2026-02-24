@@ -3,19 +3,18 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Sangdae
-middle_name: R.
+first_name: Lucas
+middle_name: Sangdae
 last_name: Nam
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+footer_text: ""
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+languages: ["en", "ko"] # supported languages
+default_lang: "en" # default language (no URL prefix)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://nsd9696.github.io # the base hostname & protocol for your site
@@ -54,7 +53,7 @@ external_services:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
@@ -91,8 +90,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Lucas AI Blog # blog_name will be displayed in your blog page
+blog_description: AI Research Engineering
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -101,7 +100,7 @@ pagination:
   enabled: true
 
 related_blog_posts:
-  enabled: true
+  enabled: false
   max_related: 5
 
 # Giscus comments (RECOMMENDED)
@@ -129,16 +128,6 @@ disqus_shortname: al-folio # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-    categories: [external-posts]
-    tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -271,16 +260,16 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: [] # these tags will be displayed on the front page of your blog
+display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Nam]
+  first_name: [Sangdae]
 
   style: apa
   locale: en

@@ -1,29 +1,29 @@
 ---
 layout: about
 title: about
-permalink: /
-lang: en
-lang_alt: /ko/
+permalink: /ko/
+lang: ko
+lang_alt: /
 subtitle: AI Research Engineer @ <a href='https://vessl.ai/'>VESSL AI</a> | UC Berkeley | ex-Intel
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info:
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: true
 
 announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
 AI Research Engineer who can GTM. Currently an AI Engineer at [VESSL AI](https://vessl.ai/) 🚀. I'm a generalist across the AI research field — I enjoy going deep wherever the problem takes me.

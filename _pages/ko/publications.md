@@ -1,15 +1,15 @@
 ---
 layout: page
-permalink: /publications/
+permalink: /ko/publications/
 title: publications
 description:
 nav: true
 nav_order: 2
-lang: en
-lang_alt: /ko/publications/
+lang: ko
+lang_alt: /publications/
 ---
 
-<!-- _pages/publications.md -->
+<!-- _pages/ko/publications.md -->
 
 <!-- Bibsearch Feature -->
 

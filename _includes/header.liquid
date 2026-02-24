@@ -2,8 +2,8 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+      {% if page.permalink != '/' and page.permalink != '/ko/' %}
+        <a class="navbar-brand title font-weight-lighter" href="{% if current_lang == 'ko' %}{{ '/ko/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -32,9 +32,9 @@
         data-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
-        aria-label="Toggle navigation"
+        aria-label="{{ t.nav.toggle }}"
       >
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">{{ t.nav.toggle }}</span>
         <span class="icon-bar top-bar"></span>
         <span class="icon-bar middle-bar"></span>
         <span class="icon-bar bottom-bar"></span>
@@ -42,15 +42,23 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+          {% comment %} Find the about page title for the current language {% endcomment %}
+          {% for pg in site.pages %}
+            {% assign pg_lang = pg.lang | default: "en" %}
+            {% if pg_lang == current_lang %}
+              {% if current_lang == 'ko' and pg.permalink == '/ko/' %}
+                {% assign about_title = pg.title %}
+              {% elsif current_lang != 'ko' and pg.permalink == '/' %}
+                {% assign about_title = pg.title %}
+              {% endif %}
+            {% endif %}
           {% endfor %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li class="nav-item {% if page.permalink == '/' or page.permalink == '/ko/' %}active{% endif %}">
+            <a class="nav-link" href="{% if current_lang == 'ko' %}{{ '/ko/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
               {{- about_title }}
-              {% if page.permalink == '/' %}
+              {% if page.permalink == '/' or page.permalink == '/ko/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -59,7 +67,8 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% assign p_lang = p.lang | default: "en" %}
+            {% if p.nav and p.autogen == null and p_lang == current_lang %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -103,7 +112,11 @@
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
-                    {%- assign url = '/blog/' -%}
+                    {%- if current_lang == 'ko' -%}
+                      {%- assign url = '/ko/blog/' -%}
+                    {%- else -%}
+                      {%- assign url = '/blog/' -%}
+                    {%- endif -%}
                   {%- else -%}
                     {%- assign url = p.url -%}
                   {%- endif %}
@@ -120,7 +133,7 @@
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
-              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+              <button id="search-toggle" title="{{ t.nav.search }}" onclick="openSearchModal()">
                 <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
               </button>
             </li>
@@ -128,13 +141,29 @@
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
-              <button id="light-toggle" title="Change theme">
+              <button id="light-toggle" title="{{ t.nav.change_theme }}">
                 <i class="fa-half-sun-moon" id="light-toggle-system"></i>
                 <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
                 <i class="fa-solid fa-sun" id="light-toggle-light"></i>
               </button>
             </li>
           {% endif %}
+          <!-- Language switcher -->
+          <li class="toggle-container">
+            {% if current_lang == 'ko' %}
+              {% assign switch_url = page.lang_alt | default: nil %}
+              {% unless switch_url %}
+                {% assign switch_url = site.data.lang_urls[page.permalink].en | default: '/' %}
+              {% endunless %}
+              <a class="nav-link" href="{{ switch_url | relative_url }}" title="English">EN</a>
+            {% else %}
+              {% assign switch_url = page.lang_alt | default: nil %}
+              {% unless switch_url %}
+                {% assign switch_url = site.data.lang_urls[page.permalink].ko | default: '/ko/' %}
+              {% endunless %}
+              <a class="nav-link" href="{{ switch_url | relative_url }}" title="한국어">KO</a>
+            {% endif %}
+          </li>
         </ul>
       </div>
     </div>
