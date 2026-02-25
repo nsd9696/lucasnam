@@ -109,16 +109,7 @@ By giving up ordering, packets can be sprayed across multiple paths. If one path
 
 When using EFA, the GPUDirect RDMA flow looks like this:
 
-```
-Node A                                                Node B
-┌─────────┐                                        ┌─────────┐
-│ GPU HBM │                                        │ GPU HBM │
-└────┬────┘                                        └────▲────┘
-     │ PCIe                                             │ PCIe
-┌────▼──────┐   Ethernet   ┌────────┐   Ethernet   ┌────┴──────┐
-│ Nitro(EFA)│───cable─────▶│ Switch │───cable─────▶│ Nitro(EFA)│
-└───────────┘              └────────┘              └───────────┘
-```
+{% include figure.liquid loading="eager" path="assets/img/efa_blog_1.png" class="img-fluid rounded z-depth-1" zoomable=true caption="EFA GPUDirect RDMA Flow" %}
 
 Of course, intra-node GPU communication still uses NVLink.
 
@@ -146,34 +137,7 @@ In my case, I was working on setting up Prefill/Decode Disagg in an A100 environ
 
 ### KV Cache Transfer Software Stack
 
-```
-┌──────────────────────────────────────────────────────────┐
-│  vLLM NixlConnector                                      │
-│  Prefill done → KV Cache block list + remote block map   │
-│  Generates async transfer request                        │
-├──────────────────────────────────────────────────────────┤
-│  NIXL (NVIDIA Inference Xfer Library)                    │
-│  Agent: memory registration, metadata mgmt, backend sel  │
-│  create_xfer_req → post_xfer_req (async, one-sided)      │
-├──────────────────────────────────────────────────────────┤
-│  ┌─ libfabric path (recommended) ──────────────────┐     │
-│  │  fi_write / fi_read (RDMA)                      │     │
-│  │  or fi_send / fi_recv (message)                 │     │
-│  │  FI_EP_RDM endpoint                             │     │
-│  └─────────────────────────────────────────────────┘     │
-├──────────────────────────────────────────────────────────┤
-│  EFA Kernel Driver (efa.ko)                              │
-│  RDMA subsystem, ibverbs interface                       │
-│  Memory Registration (GPU memory → registered with NIC)  │
-│  GPUDirect RDMA: GPU HBM → PCIe → direct NIC transfer    │
-├──────────────────────────────────────────────────────────┤
-│  Nitro Card (Hardware)                                   │
-│  SRD protocol engine, packet spraying, congestion ctrl   │
-├──────────────────────────────────────────────────────────┤
-│  AWS Network Fabric (Ethernet)                           │
-│  ECMP multipath, spine-leaf topology                     │
-└──────────────────────────────────────────────────────────┘
-```
+{% include figure.liquid loading="eager" path="assets/img/efa_blog_2.png" class="img-fluid rounded z-depth-1" zoomable=true caption="KV Cache Transfer Software Stack on EFA" %}
 
 Let's look at each component above EFA in detail.
 

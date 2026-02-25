@@ -110,16 +110,7 @@ SRD:  패킷 1 ──경로 A──→ ┐
 
 EFA 를 사용했을 때 GPUDirect RDMA 흐름은 다음과 같습니다.
 
-```
-노드 A                                          노드 B
-┌─────────┐                                    ┌─────────┐
-│ GPU HBM │                                    │ GPU HBM │
-└────┬────┘                                    └────▲────┘
-     │ PCIe                                         │ PCIe
-┌────▼──────┐    이더넷    ┌────────┐    이더넷    ┌────┴──────┐
-│ Nitro(EFA)│───케이블────▶│ 스위치   │───케이블────▶│ Nitro(EFA)│
-└───────────┘            └────────┘             └───────────┘
-```
+{% include figure.liquid loading="eager" path="assets/img/efa_blog_1.png" class="img-fluid rounded z-depth-1" zoomable=true caption="EFA GPUDirect RDMA Flow" %}
 
 물론 이때 각 노드별 GPU 끼리의 통신에는 NVLink를 사용합니다.
 
@@ -147,34 +138,7 @@ EFA 를 사용했을 때 GPUDirect RDMA 흐름은 다음과 같습니다.
 
 ### KV Cache Transfer 소프트웨어 스택
 
-```
-┌──────────────────────────────────────────────────────────
-│  vLLM NixlConnector
-│  Prefill 완료 → KV Cache 블록 목록 + 원격 블록 매핑
-│  비동기 전송 요청 생성
-├──────────────────────────────────────────────────────────
-│  NIXL (NVIDIA Inference Xfer Library)
-│  Agent: 메모리 등록, 메타데이터 관리, 백엔드 선택
-│  create_xfer_req → post_xfer_req (비동기, one-sided)
-├──────────────────────────────────────────────────────────
-│  ┌─ libfabric 경로 (권장) ──────────────────────────┐
-│  │  fi_write / fi_read (RDMA)                     │
-│  │  또는 fi_send / fi_recv (메시지)                  │
-│  │  FI_EP_RDM 엔드포인트                             │
-│  └────────────────────────────────────────────────┘
-├──────────────────────────────────────────────────────────
-│  EFA Kernel Driver (efa.ko)
-│  RDMA subsystem, ibverbs 인터페이스
-│  Memory Registration (GPU 메모리 → NIC에 등록)
-│  GPUDirect RDMA: GPU HBM → PCIe → NIC 직접 전송
-├──────────────────────────────────────────────────────────
-│  Nitro Card (하드웨어)
-│  SRD 프로토콜 엔진, 패킷 스프레이, 혼잡 제어
-├──────────────────────────────────────────────────────────
-│  AWS Network Fabric (이더넷)
-│  ECMP 멀티패스, 스파인-리프 토폴로지
-└──────────────────────────────────────────────────────────
-```
+{% include figure.liquid loading="eager" path="assets/img/efa_blog_2.png" class="img-fluid rounded z-depth-1" zoomable=true caption="KV Cache Transfer Software Stack on EFA" %}
 
 이제 EFA 위의 각각의 구성요소들을 구체적으로 봐보겠습니다.
 

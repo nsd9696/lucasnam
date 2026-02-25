@@ -30,76 +30,15 @@ This is the most intuitive approach. It iterates through activated experts one b
 
 `torch.bmm` stands for Batched Matrix Multiplication — it multiplies pairs of identically-sized matrices all at once.
 
-```
-Routing result (top_k=3):
-  token0 → Expert0, Expert2, Expert5
-  token1 → Expert1, Expert2, Expert3
-
-┌──────────────────────────────────────────────────────────────
-│  1) Duplicate expert weights for each (token, expert) pair
-│
-│  token0 × Expert0 weight copy ─┐
-│  token0 × Expert2 weight copy ─┤
-│  token0 × Expert5 weight copy ─┤  ← Stack into 3D tensor
-│  token1 × Expert1 weight copy ─┤
-│  token1 × Expert2 weight copy ─┤
-│  token1 × Expert3 weight copy ─┘
-│
-│  ⚠️ batch_size × seq_len × top_k copies → memory increase
-├──────────────────────────────────────────────────────────────
-│  2) Process everything in a single torch.bmm call
-│
-│  [token0] × [Expert0 W] → [out0_e0] ┐
-│  [token0] × [Expert2 W] → [out0_e2] ├─ token0: weighted sum of
-│  [token0] × [Expert5 W] → [out0_e5] ┘  3 results by routing weight
-│
-│  [token1] × [Expert1 W] → [out1_e1] ┐
-│  [token1] × [Expert2 W] → [out1_e2] ├─ token1: weighted sum of
-│  [token1] × [Expert3 W] → [out1_e3] ┘  3 results by routing weight
-│
-│  → Single bmm call (batch size = num_tokens × top_k = 6)
-└──────────────────────────────────────────────────────────────
-```
-
-Since it is compatible with `torch.compile`, it supports `fullgraph`. However, because it copies expert weights, memory usage can more than double compared to eager — making it more advantageous for short sequences or small batch sizes.
+Since `batched_mm` is compatible with `torch.compile`, it supports `fullgraph`. However, because it copies expert weights, memory usage can more than double compared to eager — making it more advantageous for short sequences or small batch sizes.
 
 ### grouped_mm
 
 `grouped_mm` uses `torch._grouped_mm` to support Grouped GEMM. This approach does not copy weights. Instead, it groups tokens by expert and processes all expert projections simultaneously using the Grouped GEMM kernel.
 
-```
-Routing result (top_k=3):
-  token0 → Expert0, Expert2, Expert5
-  token1 → Expert1, Expert2, Expert3
-
-┌──────────────────────────────────────────────────────────────
-│  1) Sort tokens by expert
-│
-│  Original: [(t0,E0), (t0,E2), (t0,E5), (t1,E1), (t1,E2), (t1,E3)]
-│                    ↓ sort by expert
-│  Sorted: [(t0,E0) | (t1,E1) | (t0,E2),(t1,E2) | (t1,E3) | (t0,E5)]
-│          ├ E0:1 ┤├ E1:1 ┤├──── E2:2 ────┤├ E3:1 ┤├ E5:1 ┤
-│
-│  group_sizes = [1, 1, 2, 1, 1]
-├──────────────────────────────────────────────────────────────
-│  2) Process with a single Grouped GEMM call (no weight copy)
-│
-│  [token0] × [Expert0 W] → [out0_e0] ┐
-│  [token1] × [Expert1 W] → [out1_e1] │
-│  [token0] × [Expert2 W] → [out0_e2] │ ← Single Grouped GEMM
-│  [token1] × [Expert2 W] → [out1_e2] │
-│  [token1] × [Expert3 W] → [out1_e3] │
-│  [token0] × [Expert5 W] → [out0_e5] ┘
-│           ↑ E2 weight shared by 2 tokens without duplication
-├──────────────────────────────────────────────────────────────
-│  3) Restore results to original token order, weighted sum
-│
-│  token0: out0_e0 × w0 + out0_e2 × w1 + out0_e5 × w2 → final0
-│  token1: out1_e1 × w0 + out1_e2 × w1 + out1_e3 × w2 → final1
-└──────────────────────────────────────────────────────────────
-```
-
 Since weights are not duplicated, this approach is the most memory-efficient, and it particularly excels with long sequences and large batches.
+
+{% include figure.liquid loading="eager" path="assets/img/experts_impl_blog_1.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Batched Matrix Multiplication (bmm) vs Grouped GEMM Approach" %}
 
 ---
 

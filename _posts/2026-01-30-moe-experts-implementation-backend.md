@@ -31,76 +31,15 @@ HuggingFace Transformers에 MoE 모델의 Expert FFN 연산 방식을 선택할 
 
 `torch.bmm`은 Batched Matrix Multiplication의 약자로, 동일한 크기의 행렬 쌍들을 한 번에 곱합니다.
 
-```
-라우팅 결과 (top_k=3):
-  token0 → Expert0, Expert2, Expert5
-  token1 → Expert1, Expert2, Expert3
-
-┌──────────────────────────────────────────────────────────────
-│  1) 각 (토큰, expert) 쌍마다 expert weight를 복제해서 쌓기
-│
-│  token0 × Expert0 weight 복사 ─┐
-│  token0 × Expert2 weight 복사 ─┤
-│  token0 × Expert5 weight 복사 ─┤  ← 3D 텐서로 쌓기
-│  token1 × Expert1 weight 복사 ─┤
-│  token1 × Expert2 weight 복사 ─┤
-│  token1 × Expert3 weight 복사 ─┘
-│
-│  ⚠️ batch_size × seq_len × top_k 의 복사본이 발생 → 메모리 증가
-├──────────────────────────────────────────────────────────────
-│  2) torch.bmm 한 번으로 전부 처리
-│
-│  [token0] × [Expert0 W] → [out0_e0] ┐
-│  [token0] × [Expert2 W] → [out0_e2] ├─ token0: 3개 결과를
-│  [token0] × [Expert5 W] → [out0_e5] ┘  routing weight로 가중합
-│
-│  [token1] × [Expert1 W] → [out1_e1] ┐
-│  [token1] × [Expert2 W] → [out1_e2] ├─ token1: 3개 결과를
-│  [token1] × [Expert3 W] → [out1_e3] ┘  routing weight로 가중합
-│
-│  → 단일 bmm 호출 (배치 크기 = num_tokens × top_k = 6)
-└──────────────────────────────────────────────────────────────
-```
-
-특히, `torch.compile`에도 호환되기 때문에 `fullgraph` 지원이 가능해집니다. 다만, expert weight들을 copy 하기 때문에 메모리 사용량이 eager 대비 2배 이상 뛸 수 있다는 단점이 있어, 짧은 시퀀스나 작은 배치 사이즈에서 유리하다고 볼 수 있습니다.
+특히, `batched_mm`은 `torch.compile`에도 호환되기 때문에 `fullgraph` 지원이 가능해집니다. 다만, expert weight들을 copy 하기 때문에 메모리 사용량이 eager 대비 2배 이상 뛸 수 있다는 단점이 있어, 짧은 시퀀스나 작은 배치 사이즈에서 유리하다고 볼 수 있습니다.
 
 ### grouped_mm
 
 `grouped_mm`은 `torch._grouped_mm`을 사용하는 방식으로 Grouped GEMM을 지원합니다. 해당 방식은 weight copy를 하지 않고, 대신 token들을 expert 별로 grouping 한 뒤 Grouped GEMM 커널로 해당 expert의 projection을 동시에 처리합니다.
 
-```
-라우팅 결과 (top_k=3):
-  token0 → Expert0, Expert2, Expert5
-  token1 → Expert1, Expert2, Expert3
-
-┌──────────────────────────────────────────────────────────────
-│  1) 토큰을 expert 별로 정렬 (sort by expert)
-│
-│  원본: [(t0,E0), (t0,E2), (t0,E5), (t1,E1), (t1,E2), (t1,E3)]
-│                  ↓ sort by expert
-│  정렬 후: [(t0,E0) | (t1,E1) | (t0,E2),(t1,E2) | (t1,E3) | (t0,E5)]
-│           ├ E0:1 ┤├ E1:1 ┤├──── E2:2 ────┤├ E3:1 ┤├ E5:1 ┤
-│
-│  group_sizes = [1, 1, 2, 1, 1]
-├──────────────────────────────────────────────────────────────
-│  2) weight 복제 없이 Grouped GEMM 한 번으로 처리
-│
-│  [token0] × [Expert0 W] → [out0_e0] ┐
-│  [token1] × [Expert1 W] → [out1_e1] │
-│  [token0] × [Expert2 W] → [out0_e2] │ ← 단일 Grouped GEMM 호출
-│  [token1] × [Expert2 W] → [out1_e2] │
-│  [token1] × [Expert3 W] → [out1_e3] │
-│  [token0] × [Expert5 W] → [out0_e5] ┘
-│           ↑ E2 weight를 2개 토큰이 복제 없이 공유
-├──────────────────────────────────────────────────────────────
-│  3) 결과를 원래 토큰 순서로 복원 후 routing weight로 가중합
-│
-│  token0: out0_e0 × w0 + out0_e2 × w1 + out0_e5 × w2 → final0
-│  token1: out1_e1 × w0 + out1_e2 × w1 + out1_e3 × w2 → final1
-└──────────────────────────────────────────────────────────────
-```
-
 weight를 복제하지 않기 때문에 메모리 효율이 가장 좋고, 특히 긴 시퀀스나 큰 배치에서 강점을 보입니다.
+
+{% include figure.liquid loading="eager" path="assets/img/experts_impl_blog_1.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Batched Matrix Multiplication (bmm) vs Grouped GEMM Approach" %}
 
 ---
 
