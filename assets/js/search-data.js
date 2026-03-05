@@ -16,20 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-blog",
-          title: "blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
-        },{id: "nav-publications",
-          title: "publications",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/ko/publications/";
-          },
         },{id: "nav-publications",
           title: "publications",
           description: "",
@@ -37,15 +23,33 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-multi-node-p-d-disagg-vllm-serving-how-efa-works-compared-to-infiniband",
+        },{id: "nav-tmi",
+          title: "TMI",
+          description: "Too much information about me.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/tmi/";
+          },
+        },{id: "post-nixl-for-kv-cache-in-disaggregated-serving",
         
-          title: "Multi-Node P/D Disagg vLLM Serving: How EFA Works Compared to InfiniBand?",
+          title: "NIXL for KV Cache in Disaggregated Serving",
         
-        description: "AWS EFA 환경에서의 멀티노드 GPU 통신, InfiniBand vs EFA 비교, vLLM P/D Disagg 구성까지",
+        description: "How NIXL accelerates KV Cache transfer in Prefill/Decode disaggregated LLM serving, its architecture, vLLM integration, and a real-world memory leak debugging story",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/ko/blog/2026/multi-node-gpu-networking-efa-srd/";
+            window.location.href = "/blog/2026/nixl-kv-cache-disaggregated-serving/";
+          
+        },
+      },{id: "post-cuda-graph-in-vllm-eliminating-cpu-overhead-in-llm-inference",
+        
+          title: "CUDA Graph in vLLM: Eliminating CPU Overhead in LLM Inference",
+        
+        description: "How CUDA Graph reduces CPU launch overhead in LLM decode, memory management with Private Pools, and vLLM&#39;s graph capture modes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/cuda-graph-in-vllm/";
           
         },
       },{id: "post-multi-node-p-d-disagg-vllm-serving-how-efa-works-compared-to-infiniband",
@@ -57,17 +61,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/multi-node-gpu-networking-efa-srd-en/";
-          
-        },
-      },{id: "post-moe-expert-ffn-backend-experts-implementation",
-        
-          title: "MoE Expert FFN Backend: experts_implementation",
-        
-        description: "HuggingFace Transformers에서 MoE 모델의 Expert FFN 연산 백엔드(eager, batched_mm, grouped_mm)를 선택하고, Solar-Open 100B로 벤치마크한 결과",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/ko/blog/2026/moe-experts-implementation-backend/";
           
         },
       },{id: "post-moe-expert-ffn-backend-experts-implementation",
