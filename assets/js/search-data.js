@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/tmi/";
           },
-        },{id: "post-nixl-for-kv-cache-in-disaggregated-serving",
+        },{id: "post-cross-instance-kv-cache-sharing-for-disaggregated-llm-serving-cutting-ttft-with-mooncake-and-lmcache",
+        
+          title: "Cross-Instance KV Cache Sharing for Disaggregated LLM Serving: Cutting TTFT with Mooncake and...",
+        
+        description: "How cross-instance KV cache sharing with Mooncake + LMCache reduces TTFT by 24% in multi-instance disaggregated LLM serving",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/cross-instance-kv-cache-sharing-mooncake-lmcache/";
+          
+        },
+      },{id: "post-nixl-for-kv-cache-in-disaggregated-serving",
         
           title: "NIXL for KV Cache in Disaggregated Serving",
         
